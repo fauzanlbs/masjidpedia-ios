@@ -61,7 +61,7 @@ export default class DrawerExample extends Component {
 
                         <View style={{ margin:7 }}>
                         	<View style={{flexDirection:'row'}}>
-	                        	<TouchableOpacity style={{flex:1,padding:10, borderRadius:10}}>
+	                        	<TouchableOpacity style={{flex:1,padding:10, borderRadius:13}}>
 							      <ImageBackground
 							        style={{ height:130, width:180, borderRadius:10}}
 							        source={require('../assets/bg2.png')} 
@@ -72,7 +72,7 @@ export default class DrawerExample extends Component {
 
 							      </ImageBackground>
 							    </TouchableOpacity>
-							    <TouchableOpacity style={{padding:10, borderRadius:10}}>
+							    <TouchableOpacity style={{padding:10, borderRadius:13}}>
 							      <ImageBackground
 							        style={{ height:130, width:180, borderRadius:10}}
 							        source={require('../assets/bg2.png')} 
@@ -99,12 +99,12 @@ export default class DrawerExample extends Component {
 							<View style={{flexDirection:'row'}}>
 
 							<View style={{flex:1}}>
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'green', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
 							        source={require('../assets/masjidku.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'stretch'}}> Mesjid Terdaftar </Text>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Mesjid Terdaftar </Text>
 							</View>
 							
 							</View>
@@ -112,12 +112,12 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'green', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#e688a1', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/masjidku.png')}/>
+							        source={require('../assets/dzikir_doa.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'stretch'}}> Mesjid Terdaftar </Text>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Dzikir & Doa </Text>
 							</View>
 							</View>
 
@@ -125,50 +125,105 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'green', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/masjidku.png')}/>
+							        source={require('../assets/fiqh.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'stretch'}}> Mesjid Terdaftar </Text>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Fiqih </Text>
 							</View>
 							</View>
 
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'green', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#ed9a73', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/masjidku.png')}/>
+							        source={require('../assets/asmaul_husna.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'stretch'}}> Mesjid Terdaftar </Text>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Asmaul Husna </Text>
 							</View>
 							</View>
 
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'green', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/masjidku.png')}/>
+							        source={require('../assets/baca_quran.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'stretch'}}> Mesjid Terdaftar </Text>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Baca Quran </Text>
 							</View>
 							</View>
 
 
 							</View>
+
+							<View style={{flexDirection:'row'}}>
+
+							<View style={{flex:1}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:50, width:50, margin:5}}
+							        source={require('../assets/adab_akhlak.png')}/>
+							</TouchableOpacity>
+							<View>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Adab Akhlak </Text>
+							</View>
+							
+							</View>
+
 
 							<View>
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'green', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#e688a1', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/masjidku.png')}/>
+							        source={require('../assets/kiblat.png')}/>
 							</TouchableOpacity>
-							<View style={{textAlign:'center'}}>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'stretch'}}> Mesjid Terdaftar </Text>
+							<View>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Kiblat </Text>
 							</View>
+							</View>
+
+
+
+							<View>
+
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:50, width:50, margin:5}}
+							        source={require('../assets/donasi.png')}/>
+							</TouchableOpacity>
+							<View>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Donasi </Text>
+							</View>
+							</View>
+
+
+							<View>
+
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#ed9a73', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:50, width:50, margin:5}}
+							        source={require('../assets/kelola_masjid.png')}/>
+							</TouchableOpacity>
+							<View>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Kelola Masjid </Text>
+							</View>
+							</View>
+
+
+							<View>
+
+							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:50, width:50, margin:5}}
+							        source={require('../assets/sirah.png')}/>
+							</TouchableOpacity>
+							<View>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Sirah </Text>
+							</View>
+							</View>
+
+
 							</View>
 
 
