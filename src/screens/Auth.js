@@ -13,11 +13,11 @@ class Auth extends React.Component {
     return (
        <Container>
        <Content>
-        <Tabs style={{marginTop:20}}>
-          <Tab heading={ <TabHeading activeTabStyle={{color:'gold'}} style={{color:'gold'}}><Text>MASUK</Text></TabHeading>}>
+        <Tabs tabBarUnderlineStyle={{backgroundColor:'gold'}}  style={{marginTop:20}}>
+          <Tab activeTextStyle={{color:'gold'}} heading={ <TabHeading activeTextStyle={{color:'gold'}} ><Text>MASUK</Text></TabHeading>}>
             <Login navigation={this.props.navigation}/>
           </Tab>
-          <Tab heading={ <TabHeading activeTabStyle={{color:'gold'}} style={{color:'gold'}}><Text>DAFTAR</Text></TabHeading>}>
+          <Tab activeTextStyle={{color:'gold'}} heading={ <TabHeading activeTextStyle={{color:'gold'}}><Text>DAFTAR</Text></TabHeading>}>
             <Register />
           </Tab>
           

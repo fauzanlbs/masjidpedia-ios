@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-import { View, ImageBackground, Dimensions, Image, TouchableOpacity } from 'react-native';
+import { View, ImageBackground, Dimensions, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
 import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, Item, Input } from 'native-base';
 import SideBar from '../components/SideBar';
 import SquareMenu from '../components/SquareMenu';
@@ -32,7 +32,10 @@ export default class DrawerExample extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title style={{color:'#fff',fontWeight:'bold'}}>MASJIDPEDIA</Title>
+                        <Image source={require('../assets/logofont.png')} style={{
+				        width:300,
+				        height: 35}} resizeMode="contain"/>
+				        
                     </Body>
                     <Right>
                     	<Button transparent>
@@ -42,28 +45,26 @@ export default class DrawerExample extends Component {
                 </Header>
                
                     <Content>
-                    <View style={{justifyContent:'center',alignItems:'center'}}>
-                    <Image source={require('../assets/bg2.png')} style={{
-        			
+                    <View>
+                    <ImageBackground source={require('../assets/bg2.png')} style={{
+        			 justifyContent:'center', alignItems:'center',
 			        width:420,
-			        height: 200,
-			        left: 0,
-			        top: 0}} imageStyle={{width: 420}} >
-			        </Image>
-			        </View>
-                        <View>
-                            <Item regular style={{borderRadius:10}}>
-				            <Input placeholder='Mesin pencari Artikel Islami ...' />
-				            <Icon name='search'/>
-				          </Item>
-                        </View>
+			        height: 700}}  resizeMode="stretch">
+		      			<View style={{flexDirection:'row', marginTop:50}}>
+	                    <TextInput placeholder='Mesin pencari Artikel Islami ...' style={{flex:1,borderRadius:10, borderWidth:1}} />
+			            <Icon name='search'/>
+	                	</View>
 
+	                	<Image source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:50, width:420, margin:5}} />
+                    </ImageBackground>
+				    </View>
 
+						
                         <View style={{ margin:7 }}>
                         	<View style={{flexDirection:'row'}}>
-	                        	<TouchableOpacity style={{flex:1,padding:10, borderRadius:13}}>
+	                        	<TouchableOpacity style={{flex:1,margin:10, borderRadius:13}}>
 							      <ImageBackground
-							        style={{ height:130, width:180, borderRadius:10}}
+							        style={{ height:130, width:155}}
 							        source={require('../assets/bg2.png')} 
 							      >
 
@@ -72,9 +73,9 @@ export default class DrawerExample extends Component {
 
 							      </ImageBackground>
 							    </TouchableOpacity>
-							    <TouchableOpacity style={{padding:10, borderRadius:13}}>
+							    <TouchableOpacity style={{margin:10, borderRadius:13}}>
 							      <ImageBackground
-							        style={{ height:130, width:180, borderRadius:10}}
+							        style={{ height:130, width:155}}
 							        source={require('../assets/bg2.png')} 
 							      >
 
@@ -83,9 +84,12 @@ export default class DrawerExample extends Component {
 
 							      </ImageBackground>
 							    </TouchableOpacity>
+
 
                 
                            	</View>
+
+
 
                            	<View
 							  style={{
@@ -94,9 +98,10 @@ export default class DrawerExample extends Component {
 							  }}
 							/>
 
+
 							<Text style={{fontWeight:'bold', fontSize:15, margin:15}}> KATEGORI </Text>
 
-							<View style={{flexDirection:'row'}}>
+							<ScrollView horizontal style={{flexDirection:'row'}}>
 
 							<View style={{flex:1}}>
 							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
@@ -159,9 +164,9 @@ export default class DrawerExample extends Component {
 							</View>
 
 
-							</View>
+							</ScrollView>
 
-							<View style={{flexDirection:'row'}}>
+							<ScrollView horizontal style={{flexDirection:'row'}}>
 
 							<View style={{flex:1}}>
 							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
@@ -224,11 +229,34 @@ export default class DrawerExample extends Component {
 							</View>
 
 
+							</ScrollView>
+
+
+							<View style={{width:400,backgroundColor:'#FFF8DC', height:200, marginTop:10}}>
+							<Text style={{fontWeight:'bold', fontSize:15, margin:15}}> ENSIKLOPEDIA </Text>
+
+							<View style={{width:Dimensions.get('window').width}}>
+                        	<View style={{flexDirection:'row'}}>
+	                        	<TouchableOpacity style={{flex:1,margin:10, borderRadius:13, backgroundColor:'#fff', height:50}}>
+							     
+							    </TouchableOpacity>
+							    <TouchableOpacity style={{margin:10, borderRadius:13, backgroundColor:'#fff', height:50}}>
+							     
+							    </TouchableOpacity>
+
+                
+                           	</View>
+                           	</View>
+
 							</View>
 
 
                         </View>
+
+			                    
                     </Content>
+
+                    
                     <View>
                         <View>
                             
