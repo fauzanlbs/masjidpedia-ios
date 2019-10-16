@@ -50,61 +50,24 @@ export default class DrawerExample extends Component {
         			 justifyContent:'center', alignItems:'center',
 			        width:420,
 			        height: 700}}  resizeMode="stretch">
-		      			<View style={{flexDirection:'row', marginTop:50}}>
-	                    <TextInput placeholder='Mesin pencari Artikel Islami ...' style={{flex:1,borderRadius:10, borderWidth:1}} />
-			            <Icon name='search'/>
-	                	</View>
+		      			<View style={{marginTop:110}}>
+	                   
+			           
+	                	
+	                    <View style={{height:100, width:100, justifyContent:'center', alignItems:'center', borderRadius:30}}> 
+	                    </View>
 
-	                	<Image source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:50, width:420, margin:5}} />
-                    </ImageBackground>
-				    </View>
+	                	<ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:70, width:400, margin:5}} resizeMode="contain">
+	                				<ImageBackground style={{borderRadius:5, height:30, width:130, margin:8, alignSelf:'flex-end'}} resizeMode="contain"
+							        source={require('../assets/jumlah_masjid_terdaftar.png')}>
+							        <Text style={{alignSelf:'flex-end', fontWeight:'bold', margin:14, fontSize:11}}>1565</Text>
+							        </ImageBackground>
+	                	</ImageBackground>
 
-						
-                        <View style={{ margin:7 }}>
-                        	<View style={{flexDirection:'row'}}>
-	                        	<TouchableOpacity style={{flex:1,margin:10, borderRadius:13}}>
-							      <ImageBackground
-							        style={{ height:130, width:155}}
-							        source={require('../assets/bg2.png')} 
-							      >
-
-							      <Image style={{borderRadius:5, height:50, width:130, margin:5}}
-							        source={require('../assets/jumlah_masjid_terdaftar.png')}/>
-
-							      </ImageBackground>
-							    </TouchableOpacity>
-							    <TouchableOpacity style={{margin:10, borderRadius:13}}>
-							      <ImageBackground
-							        style={{ height:130, width:155}}
-							        source={require('../assets/bg2.png')} 
-							      >
-
-							      <Image style={{borderRadius:5, height:50, width:130, margin:5}}
-							        source={require('../assets/jumlah_masjid_terdaftar.png')}/>
-
-							      </ImageBackground>
-							    </TouchableOpacity>
-
-
-                
-                           	</View>
-
-
-
-                           	<View
-							  style={{
-							    borderBottomColor: 'grey',
-							    borderBottomWidth: 0.5,
-							  }}
-							/>
-
-
-							<Text style={{fontWeight:'bold', fontSize:15, margin:15}}> KATEGORI </Text>
-
-							<ScrollView horizontal style={{flexDirection:'row'}}>
+	                	<ScrollView horizontal style={{flexDirection:'row'}}>
 
 							<View style={{flex:1}}>
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
 							        source={require('../assets/masjidku.png')}/>
 							</TouchableOpacity>
@@ -117,7 +80,7 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#e688a1', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
 							        source={require('../assets/dzikir_doa.png')}/>
 							</TouchableOpacity>
@@ -130,7 +93,7 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
 							        source={require('../assets/fiqh.png')}/>
 							</TouchableOpacity>
@@ -142,7 +105,7 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#ed9a73', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
 							        source={require('../assets/asmaul_husna.png')}/>
 							</TouchableOpacity>
@@ -154,7 +117,7 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:50, width:50, margin:5}}
 							        source={require('../assets/baca_quran.png')}/>
 							</TouchableOpacity>
@@ -165,6 +128,20 @@ export default class DrawerExample extends Component {
 
 
 							</ScrollView>
+						</View>
+                    </ImageBackground>
+				    
+
+						
+                       
+
+
+
+                      
+
+
+
+							
 
 							<ScrollView horizontal style={{flexDirection:'row'}}>
 
