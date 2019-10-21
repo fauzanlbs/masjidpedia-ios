@@ -1,8 +1,8 @@
 
 
 import React, { Component } from 'react';
-import { View, ImageBackground, Dimensions, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
-import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, Item, Input } from 'native-base';
+import { View, ImageBackground, Dimensions, Image, TouchableOpacity, ScrollView, TextInput, Text } from 'react-native';
+import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Item, Input } from 'native-base';
 import SideBar from '../components/SideBar';
 import SquareMenu from '../components/SquareMenu';
 export default class DrawerExample extends Component {
@@ -50,30 +50,39 @@ export default class DrawerExample extends Component {
         			 justifyContent:'center', alignItems:'center',
 			        width:420,
 			        height: 700}}  resizeMode="stretch">
-		      			<View style={{top:5}}>
+		      			<View>
 	                   
 			           
-	                	<View style={{justifyContent:'center', alignItems:'center'}}>
-	                    <View style={{height:130, width:130, borderRadius:100, backgroundColor: 'rgba(128, 128, 128, 0.6)'}}> 
-	                    <Text style={{color:'#fff'}}> Dzuhur </Text>
-	                    <Text style={{fontSize:20}}> 12:08 </Text>
+	                	<View style={{ alignItems:'center',flexDirection:'column', flex:1, marginTop:20}}>
+	                    <View style={{ alignItems:'center',height:130, width:130, borderRadius:100, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+	                    <Text style={{color:'#fff', marginTop:15}}> Dzuhur </Text>
+	                    <Text style={{fontSize:45, color:'#fff'}}> 12:08 </Text>
 	                    <Text style={{color:'#fff'}}> -02:37:12 </Text>
 	                    </View>
 
-	                    <Text> Menteng, Jakarta Pusat</Text>
+	                    <Text style={{margin:5, fontSize:11}}> Menteng, Jakarta Pusat</Text>
 
-	                    <View style={{height:50, width:300, borderRadius:30, backgroundColor: 'rgba(128, 128, 128, 0.6)'}}> 
-	                    <Text style={{color:'#fff'}}> 11 September 2019 | 11 Muharram 1441 H </Text>                    
+	                    <View style={{ height:20, width:300, borderRadius:8, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+	                    <Text style={{color:'#fff', textAlign:'center'}}> 11 September 2019 | 11 Muharram 1441 H </Text>                    
 	                    </View>
 
-	                    </View>
+	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
+					        width:380, height: 110}}  resizeMode="stretch"
+							        source={require('../assets/masjid_terdekat_frame.png')}>
+							        
+					    </ImageBackground>
 
-	                	<ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:70, width:400, margin:5}} resizeMode="contain">
-	                				<ImageBackground style={{borderRadius:5, height:30, width:130, margin:8, alignSelf:'flex-end'}} resizeMode="contain"
+					    <TextInput inlineImageLeft='search_icon' style={{width:380, height:40, borderRadius:8, backgroundColor:'#fff'}} placeholder='Ketik yang ingin antum cari ...'> </TextInput>
+
+
+					    <ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:70, width:400, margin:5}} resizeMode="contain">
+	                				<ImageBackground style={{borderRadius:5, height:30, width:130, margin:8, alignItems:'flex-end', justifyContent:'flex-end'}} resizeMode="contain"
 							        source={require('../assets/jumlah_masjid_terdaftar.png')}>
 							        <Text style={{alignSelf:'flex-end', fontWeight:'bold', margin:14, fontSize:11}}>1565</Text>
 							        </ImageBackground>
 	                	</ImageBackground>
+
+
 
 	                	<View style={{flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
 
@@ -124,6 +133,13 @@ export default class DrawerExample extends Component {
 
 
 							</View>
+							
+
+	                    </View>
+
+	                	
+
+	                	
 						</View>
                     </ImageBackground>
 				    
