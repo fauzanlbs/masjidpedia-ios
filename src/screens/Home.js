@@ -28,7 +28,7 @@ export default class DrawerExample extends Component {
                 <Header style={{backgroundColor:'#696969'}}>
                     <Left>
                         <Button transparent onPress={()=>this.openDrawer()}>
-                            <Icon name='menu' style={{color:'#fff'}} />
+                            <Icon name='menu' style={{color:'gold'}} />
                         </Button>
                     </Left>
                     <Body>
@@ -39,7 +39,7 @@ export default class DrawerExample extends Component {
                     </Body>
                     <Right>
                     	<Button transparent>
-                            <Icon name='search' style={{color:'#fff'}}/>
+                            <Icon name='search' style={{color:'gold'}}/>
                         </Button>
                     </Right>
                 </Header>
@@ -50,11 +50,22 @@ export default class DrawerExample extends Component {
         			 justifyContent:'center', alignItems:'center',
 			        width:420,
 			        height: 700}}  resizeMode="stretch">
-		      			<View style={{marginTop:110}}>
+		      			<View style={{top:5}}>
 	                   
 			           
-	                	
-	                    <View style={{height:100, width:100, justifyContent:'center', alignItems:'center', borderRadius:30}}> 
+	                	<View style={{justifyContent:'center', alignItems:'center'}}>
+	                    <View style={{height:130, width:130, borderRadius:100, backgroundColor: 'rgba(128, 128, 128, 0.6)'}}> 
+	                    <Text style={{color:'#fff'}}> Dzuhur </Text>
+	                    <Text style={{fontSize:20}}> 12:08 </Text>
+	                    <Text style={{color:'#fff'}}> -02:37:12 </Text>
+	                    </View>
+
+	                    <Text> Menteng, Jakarta Pusat</Text>
+
+	                    <View style={{height:50, width:300, borderRadius:30, backgroundColor: 'rgba(128, 128, 128, 0.6)'}}> 
+	                    <Text style={{color:'#fff'}}> 11 September 2019 | 11 Muharram 1441 H </Text>                    
+	                    </View>
+
 	                    </View>
 
 	                	<ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:70, width:400, margin:5}} resizeMode="contain">
@@ -64,15 +75,15 @@ export default class DrawerExample extends Component {
 							        </ImageBackground>
 	                	</ImageBackground>
 
-	                	<ScrollView horizontal style={{flexDirection:'row'}}>
+	                	<View style={{flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
 
-							<View style={{flex:1}}>
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
+							<View>
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:5}}
 							        source={require('../assets/masjidku.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Mesjid Terdaftar </Text>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Mesjid-ku </Text>
 							</View>
 							
 							</View>
@@ -80,87 +91,19 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/dzikir_doa.png')}/>
-							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Dzikir & Doa </Text>
-							</View>
-							</View>
-
-
-
-							<View>
-
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/fiqh.png')}/>
-							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Fiqih </Text>
-							</View>
-							</View>
-
-
-							<View>
-
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/asmaul_husna.png')}/>
-							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Asmaul Husna </Text>
-							</View>
-							</View>
-
-
-							<View>
-
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:5}}
 							        source={require('../assets/baca_quran.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Baca Quran </Text>
+							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Baca Qur'an </Text>
 							</View>
 							</View>
-
-
-							</ScrollView>
-						</View>
-                    </ImageBackground>
-				    
-
-						
-                       
-
-
-
-                      
-
-
-
-							
-
-							<ScrollView horizontal style={{flexDirection:'row'}}>
-
-							<View style={{flex:1}}>
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/adab_akhlak.png')}/>
-							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Adab Akhlak </Text>
-							</View>
-							
-							</View>
-
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#e688a1', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:5}}
 							        source={require('../assets/kiblat.png')}/>
 							</TouchableOpacity>
 							<View>
@@ -168,12 +111,10 @@ export default class DrawerExample extends Component {
 							</View>
 							</View>
 
-
-
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
+							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:5}}
 							        source={require('../assets/donasi.png')}/>
 							</TouchableOpacity>
 							<View>
@@ -182,31 +123,10 @@ export default class DrawerExample extends Component {
 							</View>
 
 
-							<View>
-
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#ed9a73', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/kelola_masjid.png')}/>
-							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Kelola Masjid </Text>
 							</View>
-							</View>
-
-
-							<View>
-
-							<TouchableOpacity style={{margin:5, borderRadius:13, backgroundColor:'#bbeaa6', width:70, height:70, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:50, width:50, margin:5}}
-							        source={require('../assets/sirah.png')}/>
-							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Sirah </Text>
-							</View>
-							</View>
-
-
-							</ScrollView>
+						</View>
+                    </ImageBackground>
+				    
 
 
 							<View style={{width:400,backgroundColor:'#FFF8DC', height:200, marginTop:10}}>
