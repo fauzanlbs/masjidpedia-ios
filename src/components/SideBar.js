@@ -10,7 +10,7 @@ export default class SideBar extends React.Component {
           <ImageBackground
             source={{
               uri: "https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/react-navigation/img/drawer-cover.png"
-            }}  style={{
+            }}  style={{ marginTop:5,
               height: 170,
               alignSelf: "stretch",
               backgroundColor:'grey'

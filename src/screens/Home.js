@@ -45,7 +45,7 @@ export default class DrawerExample extends Component {
                 </Header>
                
                     <Content>
-                    <View>
+                    <View style={{alignItems:'center'}}>
                     <ImageBackground source={require('../assets/bg2.png')} style={{
         			 justifyContent:'center', alignItems:'center',
 			        width:420,
@@ -55,31 +55,28 @@ export default class DrawerExample extends Component {
 			           
 	                	<View style={{ alignItems:'center',flexDirection:'column', flex:1, marginTop:20}}>
 	                    <View style={{ alignItems:'center',height:130, width:130, borderRadius:100, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
-	                    <Text style={{color:'#fff', marginTop:15}}> Dzuhur </Text>
+	                    <Text style={{color:'#fff', marginTop:20}}> Dzuhur </Text>
 	                    <Text style={{fontSize:45, color:'#fff'}}> 12:08 </Text>
 	                    <Text style={{color:'#fff'}}> -02:37:12 </Text>
 	                    </View>
 
 	                    <Text style={{margin:5, fontSize:11}}> Menteng, Jakarta Pusat</Text>
 
-	                    <View style={{ height:20, width:300, borderRadius:8, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+	                    <View style={{ height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
 	                    <Text style={{color:'#fff', textAlign:'center'}}> 11 September 2019 | 11 Muharram 1441 H </Text>                    
 	                    </View>
 
 	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
-					        width:380, height: 110}}  resizeMode="stretch"
+					        width:340, height: 110}}  resizeMode="stretch"
 							        source={require('../assets/masjid_terdekat_frame.png')}>
 							        
 					    </ImageBackground>
 
-					    <TextInput inlineImageLeft='search_icon' style={{width:380, height:40, borderRadius:8, backgroundColor:'#fff'}} placeholder='Ketik yang ingin antum cari ...'> </TextInput>
+					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, textAlign:'left'}} placeholderTextColor='black' /> 
 
 
-					    <ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:70, width:400, margin:5}} resizeMode="contain">
-	                				<ImageBackground style={{borderRadius:5, height:30, width:130, margin:8, alignItems:'flex-end', justifyContent:'flex-end'}} resizeMode="contain"
-							        source={require('../assets/jumlah_masjid_terdaftar.png')}>
-							        <Text style={{alignSelf:'flex-end', fontWeight:'bold', margin:14, fontSize:11}}>1565</Text>
-							        </ImageBackground>
+					    <ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:60, width:340}} resizeMode="contain">
+	              
 	                	</ImageBackground>
 
 
@@ -87,8 +84,8 @@ export default class DrawerExample extends Component {
 	                	<View style={{flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
 
 							<View>
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:5}}
+							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/masjidku.png')}/>
 							</TouchableOpacity>
 							<View>
@@ -100,8 +97,8 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:5}}
+							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/baca_quran.png')}/>
 							</TouchableOpacity>
 							<View>
@@ -111,8 +108,8 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:5}}
+							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/kiblat.png')}/>
 							</TouchableOpacity>
 							<View>
@@ -122,8 +119,8 @@ export default class DrawerExample extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:5, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:5}}
+							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/donasi.png')}/>
 							</TouchableOpacity>
 							<View>
@@ -133,7 +130,7 @@ export default class DrawerExample extends Component {
 
 
 							</View>
-							
+
 
 	                    </View>
 
@@ -145,23 +142,7 @@ export default class DrawerExample extends Component {
 				    
 
 
-							<View style={{width:400,backgroundColor:'#FFF8DC', height:200, marginTop:10}}>
-							<Text style={{fontWeight:'bold', fontSize:15, margin:15}}> ENSIKLOPEDIA </Text>
-
-							<View style={{width:Dimensions.get('window').width}}>
-                        	<View style={{flexDirection:'row'}}>
-	                        	<TouchableOpacity style={{flex:1,margin:10, borderRadius:13, backgroundColor:'#fff', height:50}}>
-							     
-							    </TouchableOpacity>
-							    <TouchableOpacity style={{margin:10, borderRadius:13, backgroundColor:'#fff', height:50}}>
-							     
-							    </TouchableOpacity>
-
-                
-                           	</View>
-                           	</View>
-
-							</View>
+							
 
 
                         </View>
