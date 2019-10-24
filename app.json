@@ -26,6 +26,9 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.fauzan.masjidpedia"
-    }
-  }
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  },
+  "displayName": "masjidpedia",
+  "name": "masjidpedia"
 }

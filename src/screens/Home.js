@@ -69,14 +69,16 @@ export default class DrawerExample extends Component {
 	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
 					        width:340, height: 110}}  resizeMode="stretch"
 							        source={require('../assets/masjid_terdekat_frame.png')}>
-							        
+					    
+					    <Image style={{ height:50, width:50, margin:10, bottom:2, position:'absolute', right:0}} source={require('../assets/refresh_masjid_terdekat.png')}/>
+					    
 					    </ImageBackground>
 
 					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, textAlign:'left'}} placeholderTextColor='black' /> 
 
 
 					    <ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:60, width:340}} resizeMode="contain">
-	              
+	              		<Image style={{ height:30, width:80, margin:5, bottom:10, position:'absolute', right:0}} source={require('../assets/jumlah_masjid_terdaftar.png')}/>
 	                	</ImageBackground>
 
 
@@ -131,8 +133,17 @@ export default class DrawerExample extends Component {
 
 							</View>
 
+						<View style={{flexDirection:'row', justifyContent:'center', alignItems:'center', margin:5, marginTop:20, backgroundColor:'#fff'}}>
+
+	                    <Text style={{flex:1, fontSize:12}}> BERITA ISLAMI </Text>
+	                    <Text style={{fontSize:10}}> Lihat Semua Artikel </Text>
+	                    </View>
+
 
 	                    </View>
+
+
+
 
 	                	
 
