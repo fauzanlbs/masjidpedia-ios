@@ -5,6 +5,8 @@ import { View, ImageBackground, Dimensions, Image, TouchableOpacity, ScrollView,
 import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Item, Input } from 'native-base';
 import SideBar from '../components/SideBar';
 import SquareMenu from '../components/SquareMenu';
+import Slideshow from 'react-native-image-slider-show';
+
 export default class DrawerExample extends Component {
   
 
@@ -133,11 +135,34 @@ export default class DrawerExample extends Component {
 
 							</View>
 
-						<View style={{flexDirection:'row', justifyContent:'center', alignItems:'center', margin:5, marginTop:20, backgroundColor:'#fff'}}>
-
+						<View style={{ustifyContent:'center', alignItems:'center', margin:5, marginTop:20, backgroundColor:'#fff'}}>
+						<View style={{flexDirection:'row'}}>
 	                    <Text style={{flex:1, fontSize:12}}> BERITA ISLAMI </Text>
 	                    <Text style={{fontSize:10}}> Lihat Semua Artikel </Text>
 	                    </View>
+	                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
+	                    <Slideshow containerStyle={{marginTop:10}} position={1} arrowSize={1}
+						      dataSource={[
+						        { title: 'title 1',
+							    caption: 'caption 1',url:'http://placeimg.com/640/480/any' },
+													        { title: 'title 1',
+							    caption: 'caption 2',url:'http://placeimg.com/640/480/any' },
+													        { title: 'title 1',
+							    caption: 'caption 3',url:'http://placeimg.com/640/480/any' }
+						    ]} resizeMode="contain" height={130} />
+						 </View>
+						
+						</View>
+
+						<View style={{marginTop:5, backgroundColor:'#fff', alignItems:'flex-start'}}>
+						<Text style={{textAlign:'left'}}>INFO KAJIAN</Text>
+						</View>
+
+						<View style={{marginTop:5, backgroundColor:'#fff', alignItems:'flex-start'}}>
+						<Text style={{textAlign:'left'}}>MUTIARA HADIST</Text>
+						</View>
+
+	                    
 
 
 	                    </View>
