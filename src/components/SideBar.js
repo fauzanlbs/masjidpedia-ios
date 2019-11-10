@@ -21,10 +21,10 @@ export default class SideBar extends React.Component {
               }}
               source={require('../assets/logo.png')}
             />
-            <View style={{margin:5}}>
-            <Text style={{fontSize:13, color:'#fff'}}> Fauzan </Text>
-            <Text style={{fontSize:13, color:'#fff'}}> ID : MU39875839 </Text>
-            <Text style={{fontSize:13, color:'#fff'}}> Saldo : Rp 0 </Text>
+            <View style={{margin:10}}>
+            <Text style={{fontSize:15, color:'#fff', fontFamily:'Bahnschrift'}}> Fauzan </Text>
+            <Text style={{fontSize:15, color:'#fff', fontFamily:'Bahnschrift'}}> ID : MU39875839 </Text>
+            <Text style={{fontSize:15, color:'#fff', fontFamily:'Bahnschrift'}}> Saldo : Rp 0 </Text>
             </View>
             </ImageBackground>
             
@@ -32,40 +32,40 @@ export default class SideBar extends React.Component {
         <List>
           
           <ListItem itemDivider>
-          <Icon name='home' style={{color:'grey', marginRight:30}}/> 
-          <Text>Beranda</Text>
+          <Icon name='home' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Beranda</Text>
           </ListItem>
           <ListItem itemDivider>
-          <Icon name='person' style={{color:'grey', marginRight:30}}/> 
-          <Text>Profile</Text>
+          <Icon name='person' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Profile</Text>
           </ListItem>
           <ListItem itemDivider>
-          <Icon name='notifications' style={{color:'grey', marginRight:30}}/> 
-          <Text>Notifikasi</Text>
+          <Icon name='notifications' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Notifikasi</Text>
           </ListItem>
           <ListItem itemDivider>
-          <Icon name='business' style={{color:'grey', marginRight:30}}/> 
-          <Text>Registrasi Masjid</Text>
+          <Icon name='business' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Registrasi Masjid</Text>
           </ListItem>
           <ListItem itemDivider>
-          <Icon name='people' style={{color:'grey', marginRight:30}}/> 
-          <Text>Registrasi Komunitas</Text>
+          <Icon name='people' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Registrasi Komunitas</Text>
           </ListItem>
            <ListItem itemDivider>
-          <Icon name='chatboxes' style={{color:'grey', marginRight:30}}/> 
-          <Text>Customer Service</Text>
+          <Icon name='chatboxes' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Customer Service</Text>
           </ListItem>
           <ListItem itemDivider>
-          <Icon name='information-circle' style={{color:'grey', marginRight:30}}/> 
-          <Text>Tentang Kami</Text>
+          <Icon name='information-circle' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Tentang Kami</Text>
           </ListItem>
           <ListItem itemDivider>
-          <Icon name='help-circle' style={{color:'grey', marginRight:30}}/> 
-          <Text>Bantuan</Text>
+          <Icon name='help-circle' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Bantuan</Text>
           </ListItem>
           <ListItem itemDivider>
-          <Icon name='log-out' style={{color:'grey', marginRight:30}}/> 
-          <Text>Log Out</Text>
+          <Icon name='log-out' style={{color:'grey', width:30}}/> 
+          <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Log Out</Text>
           </ListItem>
         </List>
           

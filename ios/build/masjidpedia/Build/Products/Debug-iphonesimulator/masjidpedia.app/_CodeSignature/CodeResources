@@ -4,13 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Bahnschrift_Light.TTF</key>
+		<data>
+		HKSc2r7BGp96XVLf4PAcxrRxw3Q=
+		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
 		JaBSbHTXjsCljbb1nvtiLFMipUQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TbjXCU4WaUBW8wIMI1lqvTDnbc0=
+		Io2qBLT/2AOIYgThrIV/gu7fNHo=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -19,6 +23,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Bahnschrift_Light.TTF</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HKSc2r7BGp96XVLf4PAcxrRxw3Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			9G4ub+ol2EWAow1FF3/WoDu6KWpQgS9UlOb/FQBGVJM=
+			</data>
+		</dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<dict>
 			<key>hash</key>

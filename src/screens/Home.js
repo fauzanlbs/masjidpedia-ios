@@ -95,7 +95,7 @@ export default class DrawerExample extends Component {
 							        source={require('../assets/masjidku.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Mesjid-ku </Text>
+							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Mesjid-ku </Text>
 							</View>
 							
 							</View>
@@ -108,7 +108,7 @@ export default class DrawerExample extends Component {
 							        source={require('../assets/baca_quran.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Baca Qur'an </Text>
+							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Qur'an </Text>
 							</View>
 							</View>
 
@@ -119,7 +119,7 @@ export default class DrawerExample extends Component {
 							        source={require('../assets/kiblat.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Kiblat </Text>
+							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Kiblat </Text>
 							</View>
 							</View>
 
@@ -130,7 +130,7 @@ export default class DrawerExample extends Component {
 							        source={require('../assets/donasi.png')}/>
 							</TouchableOpacity>
 							<View>
-							<Text style={{fontSize:10, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center'}}> Donasi </Text>
+							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Donasi </Text>
 							</View>
 							</View>
 
@@ -146,37 +146,68 @@ export default class DrawerExample extends Component {
 	                	
 					
         </ImageBackground>
-        <View style={{ustifyContent:'center', alignItems:'center', margin:5, marginTop:20, backgroundColor:'#fff'}}>
-					<View style={{flexDirection:'row'}}>
-                    <Text style={{flex:1, fontSize:12}}> BERITA ISLAMI </Text>
-                    <Text style={{fontSize:10}}> Lihat Semua Artikel </Text>
+        <View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+					<View style={{flexDirection:'row',margin:3}}>
+                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> BERITA ISLAMI </Text>
+                    <Text style={{fontSize:10, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
-					                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
-					                    <Slideshow containerStyle={{marginTop:10}} position={1} arrowSize={1}
-										      dataSource={[
-										        { title: 'title 1',
-											    caption: 'caption 1',url:'http://placeimg.com/640/480/animals' },
-																	        { title: 'title 1',
-											    caption: 'caption 2',url:'http://placeimg.com/640/480/animals' },
-																	        { title: 'title 1',
-											    caption: 'caption 3',url:'http://placeimg.com/640/480/animals' }
-										    ]} resizeMode="contain" height={130} />
-									  </View>
+		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
+		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={1} titleStyle={{color:'#fff', fontSize:12}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:12}} 
+							      dataSource={[
+							        {
+								    caption: 'Ini kota di AS yang Penduduknya Mayoritas Muslim',
+								    url:'http://placeimg.com/640/480/nature' },
+														        { url:'http://placeimg.com/640/480/nature' },
+														        { url:'http://placeimg.com/640/480/nature' }
+							    ]} resizeMode="contain" height={200} />
+						  </View>
 						
-						</View>
-         				<View style={{backgroundColor:'#fff', alignItems:'flex-start'}}>
-						<Text style={{textAlign:'left'}}>INFO KAJIAN</Text>
-						</View>
+		</View>
 
-						<View style={{marginTop:5, backgroundColor:'#fff', alignItems:'flex-start'}}>
-						<Text style={{textAlign:'left'}}>MUTIARA HADIST</Text>
-						</View>
 
+			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+					<View style={{flexDirection:'row',margin:3}}>
+                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> INFO KAJIAN </Text>
+                    <Text style={{fontSize:10, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+                    </View>
+		                   <View style={{alignItems:'center', justifyContent:'center', width:350, backgroundColor:'rgba(52, 52, 52, 0.4)'}}>
+		                    <View style={{backgroundColor:'#fff', margin:10, borderRadius:5}}>
+                            <Text style={{margin:5}}> TEST</Text>
+		                    </View>
+						  </View>
+						
+		</View>
+
+			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+					<View style={{flexDirection:'row',margin:3}}>
+                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> MUTIARA HADIST </Text>
+                    <Text style={{fontSize:10, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+                    </View>
+		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
+		                    <Image style={{ height:280, width:350, margin:2}} source={{uri:'https://yufidia.com/wp-content/uploads/2019/03/HADITS-012-KOTAK-REV.png'}} resizeMode="stretch"/>
+						  </View>
+						
+		</View>
 	                    
-					<Image source={require('../assets/banner_islampedia.png')} style={{borderRadius:5, height:60, width:350}} resizeMode="stretch" />
-	    </View>  
+		<Image source={require('../assets/banner_islampedia.png')} style={{borderRadius:5, height:60, width:350}} resizeMode="stretch" />
 
-                    </Content>
+
+		<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+					<View style={{flexDirection:'row',margin:3}}>
+                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> VIDEO KAJIAN </Text>
+                    
+                    </View>
+		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
+		                    <Image style={{ height:280, width:350, margin:2}} source={{uri:'https://i.ytimg.com/vi/smtmRhZ9fos/sddefault.jpg'}} resizeMode="stretch"/>
+						  </View>
+						
+		</View>
+	    
+
+
+
+	    </View>  
+        </Content>
 
                     
                         <View>

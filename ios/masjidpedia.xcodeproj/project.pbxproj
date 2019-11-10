@@ -12,6 +12,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		5B0B43D73AC384154A208CA8 /* libPods-masjidpedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96374F6BC072139E7D674FC2 /* libPods-masjidpedia.a */; };
+		8434CA3C2366F2940026FF32 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434CA3B2366F2930026FF32 /* icon.png */; };
+		8434CA3E2366F9F60026FF32 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8434CA3D2366F9F60026FF32 /* icon.jpg */; };
+		8434CA40236701DB0026FF32 /* icon_remove_tr.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434CA3F236701DB0026FF32 /* icon_remove_tr.png */; };
+		F702EF118D0A429FB808086C /* Bahnschrift_Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7B83F935DA5A46E4B035C036 /* Bahnschrift_Light.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = masjidpedia/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = masjidpedia/main.m; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B83F935DA5A46E4B035C036 /* Bahnschrift_Light.TTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Bahnschrift_Light.TTF; path = ../assets/fonts/Bahnschrift_Light.TTF; sourceTree = "<group>"; };
+		8434CA3B2366F2930026FF32 /* icon.png */ = {isa = PBXFileReference; explicitFileType = image.jpeg; name = icon.png; path = ../assets/icon.png; sourceTree = "<group>"; };
+		8434CA3D2366F9F60026FF32 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = ../assets/icon.jpg; sourceTree = "<group>"; };
+		8434CA3F236701DB0026FF32 /* icon_remove_tr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_remove_tr.png; path = ../assets/icon_remove_tr.png; sourceTree = "<group>"; };
 		96374F6BC072139E7D674FC2 /* libPods-masjidpedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-masjidpedia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA28FD0AB1AB7AA14B56E34F /* Pods-masjidpedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masjidpedia.release.xcconfig"; path = "Target Support Files/Pods-masjidpedia/Pods-masjidpedia.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -51,6 +59,9 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				8434CA3F236701DB0026FF32 /* icon_remove_tr.png */,
+				8434CA3D2366F9F60026FF32 /* icon.jpg */,
+				8434CA3B2366F2930026FF32 /* icon.png */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -77,6 +88,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A2A97D81ED146E9A2021A2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B83F935DA5A46E4B035C036 /* Bahnschrift_Light.TTF */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +111,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				289BB5AF468668E8E99C658D /* Pods */,
+				7A2A97D81ED146E9A2021A2F /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,7 +155,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
@@ -168,8 +188,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8434CA40236701DB0026FF32 /* icon_remove_tr.png in Resources */,
+				8434CA3C2366F2940026FF32 /* icon.png in Resources */,
+				8434CA3E2366F9F60026FF32 /* icon.jpg in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				F702EF118D0A429FB808086C /* Bahnschrift_Light.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

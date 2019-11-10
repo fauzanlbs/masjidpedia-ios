@@ -5,6 +5,11 @@
     "ios": "react-native run-ios",
     "web": "expo start --web"
   },
+  "rnpm": {
+    "assets": [
+  "./assets/fonts/"
+    ]
+  },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.2",
     "expo": "^35.0.0",
