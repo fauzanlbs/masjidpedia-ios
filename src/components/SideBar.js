@@ -10,7 +10,7 @@ export default class SideBar extends React.Component {
           <ImageBackground
             source={{
               uri: "https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/react-navigation/img/drawer-cover.png"
-            }}  style={{ marginTop:5,
+            }}  style={{ marginTop:10,
               height: 170,
               alignSelf: "stretch",
               backgroundColor:'grey'
@@ -22,9 +22,9 @@ export default class SideBar extends React.Component {
               source={require('../assets/logo.png')}
             />
             <View style={{margin:10}}>
-            <Text style={{fontSize:15, color:'#fff', fontFamily:'Bahnschrift'}}> Fauzan </Text>
-            <Text style={{fontSize:15, color:'#fff', fontFamily:'Bahnschrift'}}> ID : MU39875839 </Text>
-            <Text style={{fontSize:15, color:'#fff', fontFamily:'Bahnschrift'}}> Saldo : Rp 0 </Text>
+            <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> Fauzan </Text>
+            <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> ID : MU39875839 </Text>
+            <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> Saldo : Rp 0 </Text>
             </View>
             </ImageBackground>
             

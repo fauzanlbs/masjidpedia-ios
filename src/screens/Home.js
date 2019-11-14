@@ -58,22 +58,22 @@ export default class DrawerExample extends Component {
 	                   
 			           
 	                	<View style={{ alignItems:'center',flexDirection:'column', flex:1, marginTop:20}}>
-	                    <View style={{ alignItems:'center',height:130, width:130, borderRadius:100, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+	                    <TouchableOpacity onPress={()=> {this.props.navigation.navigate('JadwalSolat')}} style={{ alignItems:'center',height:130, width:130, borderRadius:100, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
 	                    <Text style={{color:'#fff', marginTop:20}}> Dzuhur </Text>
 	                    <Text style={{fontSize:45, color:'#fff'}}> 12:08 </Text>
 	                    <Text style={{color:'#fff'}}> -02:37:12 </Text>
-	                    </View>
+	                    </TouchableOpacity>
 
-	                    <Text style={{margin:5, fontSize:11}}> Menteng, Jakarta Pusat</Text>
+	                    <Text style={{margin:5, fontSize:12}}> Menteng, Jakarta Pusat</Text>
 
-	                    <View style={{ height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
-	                    <Text style={{color:'#fff', textAlign:'center'}}> 11 September 2019 | 11 Muharram 1441 H </Text>                    
+	                    <View style={{alignItems:'center', justifyContent:'center', height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+	                    <Text style={{color:'#fff', textAlign:'center', fontFamily:'Bahnschrift'}}> 11 September 2019 | 11 Muharram 1441 H </Text>                    
 	                    </View>
 
 	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
 					        width:340, height: 110}}  resizeMode="stretch"
 							        source={require('../assets/masjid_terdekat_frame.png')}>
-					    
+					      <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Ustad Maududi Abdullah </Text>
 					    <Image style={{ height:50, width:50, margin:10, bottom:2, position:'absolute', right:0}} source={require('../assets/refresh_masjid_terdekat.png')}/>
 					    
 					    </ImageBackground>
@@ -148,8 +148,8 @@ export default class DrawerExample extends Component {
         </ImageBackground>
         <View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
 					<View style={{flexDirection:'row',margin:3}}>
-                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> BERITA ISLAMI </Text>
-                    <Text style={{fontSize:10, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> BERITA ISLAMI </Text>
+                    <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
 		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={1} titleStyle={{color:'#fff', fontSize:12}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:12}} 
@@ -167,21 +167,48 @@ export default class DrawerExample extends Component {
 
 			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
 					<View style={{flexDirection:'row',margin:3}}>
-                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> INFO KAJIAN </Text>
-                    <Text style={{fontSize:10, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> INFO KAJIAN </Text>
+                    <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
-		                   <View style={{alignItems:'center', justifyContent:'center', width:350, backgroundColor:'rgba(52, 52, 52, 0.4)'}}>
-		                    <View style={{backgroundColor:'#fff', margin:10, borderRadius:5}}>
-                            <Text style={{margin:5}}> TEST</Text>
+                    	  
+		                   <View  style={{alignItems:'center', justifyContent:'center', width:350, backgroundColor:'rgba(52, 52, 52, 0.4)'}}>
+		                     <ScrollView horizontal={true}>
+		                     <View style={{backgroundColor:'#fff', margin:10, borderRadius:5, flexDirection:'row'}}>
+			                    <View style={{marginLeft:5, marginRight:5, justifyContent:'center', alignItems:'center'}}>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Minggu </Text>
+	                            <Text style={{marginLeft:5, marginRight:5,  fontFamily:'Bahnschrift', fontSize:40, color:'orange'}}> 17 </Text>
+	                            <Text style={{marginLeft:5, marginRight:5,  fontFamily:'Bahnschrift', fontSize:16}}> November </Text>
+	                            </View>
+	                            <View style={{marginLeft:5, marginRight:5}}>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Masjid Darussalam </Text>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Ustad Syafiq Basalamah </Text>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Bekasi </Text>
+	                            </View>
 		                    </View>
+
+		                    <View style={{backgroundColor:'#fff', margin:10, borderRadius:5, flexDirection:'row'}}>
+			                    <View style={{marginLeft:5, marginRight:5, justifyContent:'center', alignItems:'center'}}>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Minggu </Text>
+	                            <Text style={{marginLeft:5, marginRight:5,  fontFamily:'Bahnschrift', fontSize:40, color:'orange'}}> 21 </Text>
+	                            <Text style={{marginLeft:5, marginRight:5,  fontFamily:'Bahnschrift', fontSize:16}}> November </Text>
+	                            </View>
+	                            <View style={{marginLeft:5, marginRight:5}}>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Masjid An Nur </Text>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Ustad Maududi Abdullah </Text>
+	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Bogor </Text>
+	                            </View>
+		                    </View>
+
+		                    </ScrollView>
 						  </View>
+						  
 						
 		</View>
 
 			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
 					<View style={{flexDirection:'row',margin:3}}>
-                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> MUTIARA HADIST </Text>
-                    <Text style={{fontSize:10, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> MUTIARA HADIST </Text>
+                    <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
 		                    <Image style={{ height:280, width:350, margin:2}} source={{uri:'https://yufidia.com/wp-content/uploads/2019/03/HADITS-012-KOTAK-REV.png'}} resizeMode="stretch"/>
@@ -194,7 +221,7 @@ export default class DrawerExample extends Component {
 
 		<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
 					<View style={{flexDirection:'row',margin:3}}>
-                    <Text style={{flex:1, fontSize:18, marginTop:5, fontFamily:'Bahnschrift'}}> VIDEO KAJIAN </Text>
+                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> VIDEO KAJIAN </Text>
                     
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>

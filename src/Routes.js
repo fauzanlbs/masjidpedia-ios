@@ -5,6 +5,7 @@ import Auth from './screens/Auth';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Register from './screens/Register';
+import JadwalSolat from './screens/JadwalSolat';
 
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -51,6 +52,10 @@ const AppStack = createStackNavigator(
             navigationOptions: {
                 header: null
             }
+
+        },
+        JadwalSolat: {
+            screen: JadwalSolat,
 
         }
 
