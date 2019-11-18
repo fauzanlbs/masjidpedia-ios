@@ -5,7 +5,7 @@ import {View, Text} from 'react-native';
 function TentangKami() {
   return(
       <View style={{ flex: 1 }}>
-        <Text> Homezzz </Text>
+        <Text> Tentang Kamizzz </Text>
       </View>
       
   )

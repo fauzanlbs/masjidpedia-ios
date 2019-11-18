@@ -7,6 +7,11 @@ import Login from './screens/Login';
 import Register from './screens/Register';
 import JadwalSolat from './screens/JadwalSolat';
 
+//sidebar
+import Profile from './screens/menu/Profile';
+import Bantuan from './screens/menu/Bantuan';
+import TentangKami from './screens/menu/TentangKami';
+
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -56,6 +61,18 @@ const AppStack = createStackNavigator(
         },
         JadwalSolat: {
             screen: JadwalSolat,
+
+        },
+        Profile: {
+            screen: Profile,
+
+        },
+        Bantuan: {
+            screen: Bantuan,
+
+        },
+        TentangKami: {
+            screen: TentangKami,
 
         }
 

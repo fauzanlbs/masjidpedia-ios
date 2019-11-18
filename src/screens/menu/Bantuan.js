@@ -5,7 +5,7 @@ import {View, Text} from 'react-native';
 function Bantuan() {
   return(
       <View style={{ flex: 1 }}>
-        <Text> Homezzz </Text>
+        <Text> Bantuaanz </Text>
       </View>
       
   )

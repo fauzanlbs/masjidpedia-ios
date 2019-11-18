@@ -3,7 +3,9 @@ import { AppRegistry, Image, StatusBar, ImageBackground, View } from "react-nati
 import { Container, Content, Text, List, ListItem, Icon } from "native-base";
 const routes = ["Home", "Chat", "Profile"];
 export default class SideBar extends React.Component {
+ 
   render() {
+   
     return (
       <Container>
         <Content>
@@ -35,7 +37,7 @@ export default class SideBar extends React.Component {
           <Icon name='home' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Beranda</Text>
           </ListItem>
-          <ListItem itemDivider>
+          <ListItem itemDivider onPress = { ()=> this.props.myNavigation.navigate('Profile')}>
           <Icon name='person' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Profile</Text>
           </ListItem>
@@ -55,11 +57,11 @@ export default class SideBar extends React.Component {
           <Icon name='chatboxes' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Customer Service</Text>
           </ListItem>
-          <ListItem itemDivider>
+          <ListItem itemDivider onPress = { ()=> this.props.myNavigation.navigate('TentangKami')}>
           <Icon name='information-circle' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Tentang Kami</Text>
           </ListItem>
-          <ListItem itemDivider>
+          <ListItem itemDivider onPress = { ()=> this.props.myNavigation.navigate('Bantuan')}>
           <Icon name='help-circle' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Bantuan</Text>
           </ListItem>

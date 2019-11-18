@@ -4,25 +4,52 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		PYZoUzmUB2LVIfKU9yvJtBvbRhU=
+		</data>
 		<key>Bahnschrift_Light.TTF</key>
 		<data>
 		HKSc2r7BGp96XVLf4PAcxrRxw3Q=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		JaBSbHTXjsCljbb1nvtiLFMipUQ=
+		Wgg9K7lxNiV2XZqh+uYKVhO/8Gs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Io2qBLT/2AOIYgThrIV/gu7fNHo=
+		zGMLSA9t6YrF0wgZg4olPqcIJg4=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>icon.jpg</key>
+		<data>
+		L9+rCknwBVBrxlacxM9PQBxQb1E=
+		</data>
+		<key>icon.png</key>
+		<data>
+		L9+rCknwBVBrxlacxM9PQBxQb1E=
+		</data>
+		<key>icon_remove_tr.png</key>
+		<data>
+		sKBR9ycOPxEQOZiCRvKxcewJuB8=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PYZoUzmUB2LVIfKU9yvJtBvbRhU=
+			</data>
+			<key>hash2</key>
+			<data>
+			TRYjVYDkE9L4DXBDVXHM6oeKjQPRltFs7r7kkk2mr8U=
+			</data>
+		</dict>
 		<key>Bahnschrift_Light.TTF</key>
 		<dict>
 			<key>hash</key>
@@ -38,11 +65,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JaBSbHTXjsCljbb1nvtiLFMipUQ=
+			Wgg9K7lxNiV2XZqh+uYKVhO/8Gs=
 			</data>
 			<key>hash2</key>
 			<data>
-			+XyewTCwzR2MZ2xAhuWQHncfJXyja4Uj3DSku72d8gI=
+			sR275xqlNaym9HCfegluCYapXKLm+DZpVIKjXv98huE=
+			</data>
+		</dict>
+		<key>icon.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			L9+rCknwBVBrxlacxM9PQBxQb1E=
+			</data>
+			<key>hash2</key>
+			<data>
+			X5edEHGEtQd/NUpB507LS2Sm1/tvQx74B8ospkszqm8=
+			</data>
+		</dict>
+		<key>icon.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			L9+rCknwBVBrxlacxM9PQBxQb1E=
+			</data>
+			<key>hash2</key>
+			<data>
+			X5edEHGEtQd/NUpB507LS2Sm1/tvQx74B8ospkszqm8=
+			</data>
+		</dict>
+		<key>icon_remove_tr.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sKBR9ycOPxEQOZiCRvKxcewJuB8=
+			</data>
+			<key>hash2</key>
+			<data>
+			g5ChCBaVCgV8ZpSOk2Il8cmZAoy1rjrtfTo/5dVlCvY=
 			</data>
 		</dict>
 	</dict>

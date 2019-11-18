@@ -23,7 +23,7 @@ export default class DrawerExample extends Component {
         return (
             <Drawer
                 ref={(ref) => { this._drawer = ref; }}
-                content={<SideBar navigator={this.navigator} />}
+                content={<SideBar myNavigation={this.props.navigation} />}
                 onClose={() => this.closeDrawer()} >
             <Container>
              
@@ -73,7 +73,19 @@ export default class DrawerExample extends Component {
 	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
 					        width:340, height: 110}}  resizeMode="stretch"
 							        source={require('../assets/masjid_terdekat_frame.png')}>
-					      <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Ustad Maududi Abdullah </Text>
+						
+							
+								  <View style={{flexDirection:'row', top:13}}>
+							      <Text style={{flex:1, marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Masjid Abu Bakar </Text>
+							      <Image style={{ height:23, width:23, position:'absolute', right:78}} source={require('../assets/direction_masjid_terdekat.png')}/>
+							      </View>
+
+							      <View style={{flexDirection:'row', top:22}}>
+							      <Text style={{flex:1,marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Masjid Al Hijriah </Text>
+							      <Image style={{ height:25, width:25, position:'absolute', right:78}} source={require('../assets/direction_masjid_terdekat.png')}/>
+							      </View>
+					   		
+
 					    <Image style={{ height:50, width:50, margin:10, bottom:2, position:'absolute', right:0}} source={require('../assets/refresh_masjid_terdekat.png')}/>
 					    
 					    </ImageBackground>
@@ -152,7 +164,7 @@ export default class DrawerExample extends Component {
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
-		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={1} titleStyle={{color:'#fff', fontSize:12}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:12}} 
+		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={1} titleStyle={{color:'#fff', fontSize:12, fontFamily:'Bahnschrift'}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:14}} 
 							      dataSource={[
 							        {
 								    caption: 'Ini kota di AS yang Penduduknya Mayoritas Muslim',

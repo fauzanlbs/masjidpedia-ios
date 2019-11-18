@@ -6,38 +6,6 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>1F244787-B840-42D9-A274-6C72136C27C8</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1F244787-B840-42D9-A274-6C72136C27C8.xcactivitylog</string>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>masjidpedia project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>masjidpedia</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>593617641.59394705</real>
-			<key>timeStoppedRecording</key>
-			<real>593617660.28244603</real>
-			<key>title</key>
-			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>1F244787-B840-42D9-A274-6C72136C27C8</string>
-		</dict>
 		<key>2C083A8F-C0C6-4A6D-B9C9-4AA09A05DA41</key>
 		<dict>
 			<key>className</key>
@@ -69,6 +37,38 @@
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>uniqueIdentifier</key>
 			<string>2C083A8F-C0C6-4A6D-B9C9-4AA09A05DA41</string>
+		</dict>
+		<key>3799E321-8E14-4AC3-8269-96DE2EADE026</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3799E321-8E14-4AC3-8269-96DE2EADE026.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>masjidpedia project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>masjidpedia</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>595745651.83830404</real>
+			<key>timeStoppedRecording</key>
+			<real>595745687.87787604</real>
+			<key>title</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>3799E321-8E14-4AC3-8269-96DE2EADE026</string>
 		</dict>
 	</dict>
 </dict>
