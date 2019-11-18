@@ -12,88 +12,80 @@ function JadwalSolat() {
 			<View style={{alignItems:'center', justifyContent:'center', margin:10}}>
 		 	<Text style={{margin:5, fontSize:13}}> Jakarta Pusat</Text>
 
-	        <View style={{ height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+	        <View style={{ justifyContent:'center', height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
 	        <Text style={{color:'#fff', textAlign:'center', fontFamily:'Bahnschrift'}}> 12 September 2019 | 11 Muharram 1441 H </Text>                    
 	        </View>
 	        </View>
 
-	        <Content>
+	        <View style={{alignItems:'center'}}>
           <ListItem icon>
-            <Left>
+            <Left style={{width:'35%'}}>
               <Text style={{ fontFamily:'Bahnschrift'}}>
                 Shubuh
               </Text>
             </Left>
-            <Body style={{justifyContent:'center', alignItems:'center'}}>
-              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift'}}>
-                04:39
-              </Text>
+            
+            <Body style={{width:'35%', backgroundColor:'#fff'}}>
+              <Text style={{fontFamily:'Bahnschrift', textAlign:'center'}}>04:39</Text>
             </Body>
-            <Right>
-              <Image style={{ height:30, width:30, margin:2}} source={require('../assets/adzan_ON.png')}/>
+            
+            <Right style={{width:'35%'}} >
+              <Image style={{ height:30, width:30}} source={require('../assets/adzan_ON.png')}/>
             </Right>
           </ListItem>
            <ListItem icon>
-            <Left>
+            <Left style={{width:'35%'}}>
               <Text style={{ fontFamily:'Bahnschrift'}}>
                 Dzuhur
               </Text>
             </Left>
-            <Body style={{justifyContent:'center', alignItems:'center'}}>
-              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift'}}>
-                12:39
-              </Text>
+            <Body style={{width:'35%', backgroundColor:'#fff'}}>
+              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift', textAlign:'center'}}>12:39</Text>
             </Body>
-            <Right>
-              <Image style={{ height:30, width:30, margin:2}} source={require('../assets/adzan_ON.png')}/>
+            <Right style={{width:'35%'}}>
+              <Image style={{ height:30, width:30}} source={require('../assets/adzan_OFF.png')}/>
             </Right>
           </ListItem>
            <ListItem icon>
-            <Left>
+            <Left style={{width:'35%'}}>
               <Text style={{ fontFamily:'Bahnschrift'}}>
                 Ashar
               </Text>
             </Left>
-            <Body style={{justifyContent:'center', alignItems:'center'}}>
-              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift'}}>
-                15:39
-              </Text>
+            <Body style={{width:'35%', backgroundColor:'#fff'}}>
+              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift', textAlign:'center'}}>15:39</Text>
             </Body>
-            <Right>
-              <Image style={{ height:30, width:30, margin:2}} source={require('../assets/adzan_ON.png')}/>
+            <Right style={{width:'35%'}}>
+              <Image style={{ height:30, width:30}} source={require('../assets/adzan_OFF.png')}/>
             </Right>
           </ListItem>
            <ListItem icon>
-            <Left>
+            <Left style={{width:'35%'}}>
               <Text style={{ fontFamily:'Bahnschrift'}}>
                 Magrib
               </Text>
             </Left>
-            <Body style={{justifyContent:'center', alignItems:'center'}}>
-              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift'}}>
-                18:39
-              </Text>
+            <Body style={{width:'35%', backgroundColor:'#fff'}}>
+              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift', textAlign:'center'}}>18:39</Text>
             </Body>
-            <Right>
-              <Image style={{ height:30, width:30, margin:2}} source={require('../assets/adzan_ON.png')}/>
+            <Right style={{width:'35%'}}>
+              <Image style={{ height:30, width:30}} source={require('../assets/adzan_ON.png')}/>
             </Right>
           </ListItem>
            <ListItem icon>
-            <Left>
+            <Left style={{width:'35%'}}>
               <Text style={{ fontFamily:'Bahnschrift'}}>
                 Isya
               </Text>
             </Left>
-            <Body style={{justifyContent:'center', alignItems:'center'}}>
-              <Text style={{ backgroundColor: "#fff", fontFamily:'Bahnschrift'}}>
-                19:39
-              </Text>
+            <Body style={{width:'35%', backgroundColor:'#fff'}}>
+              <Text style={{ fontFamily:'Bahnschrift', textAlign:'center'}}>19:39</Text>
             </Body>
-            <Right>
-              <Image style={{ height:30, width:30, margin:2}} source={require('../assets/adzan_ON.png')}/>
+            <Right style={{width:'35%'}}>
+              <Image style={{ height:30, width:30}} source={require('../assets/adzan_ON.png')}/>
             </Right>
           </ListItem>
-        </Content>
+        </View>
 	   
       </Container>
       

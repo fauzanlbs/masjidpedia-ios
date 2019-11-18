@@ -82,7 +82,7 @@ export default class DrawerExample extends Component {
 
 							      <View style={{flexDirection:'row', top:22}}>
 							      <Text style={{flex:1,marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Masjid Al Hijriah </Text>
-							      <Image style={{ height:25, width:25, position:'absolute', right:78}} source={require('../assets/direction_masjid_terdekat.png')}/>
+							      <Image style={{ height:23, width:23, position:'absolute', right:78}} source={require('../assets/direction_masjid_terdekat.png')}/>
 							      </View>
 					   		
 
