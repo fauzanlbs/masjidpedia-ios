@@ -1,23 +1,52 @@
 import React, { Component } from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, ToastAndroid} from 'react-native';
 import { Container, Header, Content, Form, Item, Input, Label, Icon, Button } from 'native-base';
 import Home from './Home';
+import {Api} from '../api/API';
 
 
 export default class Login extends Component {
 
 	 constructor(props) {
          super(props);
-        this.state = {};
+        this.state = {
+          email: '',
+          pass: ''
+        };
         this.onButtonPress=this.onButtonPress.bind(this);
+
 
     }
 
-    onButtonPress= () => {
-       alert("ok");
+     onButtonPress= () => {
+
+          let api = new Api();
+          api.create();
+          let client = api.getClient();
+
+          let data = {
+             email:this.state.email,
+             pass:this.state.pass
+          }
+
+          let user = client.post('/login',data).then((res)=>{
+            if(res.status == 200){
+              console.log('ini resnya', res)
+              ToastAndroid.show("login berhasil", ToastAndroid.SHORT)
+              this.props.navigation.navigate('Home')
+            }
+
+          }).catch((err)=>{
+            console.log('ini errornya', err)
+          })
+
+       alert("ok")
         // const { navigate } = this.props.navigation;
-        this.props.navigation.navigate('Home');
-        };
+        
+        }
+
+
+   
 
    render() {
    	const { navigate } = this.props.navigation;
@@ -34,12 +63,12 @@ export default class Login extends Component {
             <Item floatingLabel>
               <Icon active name='mail' />
               <Label>Email</Label>
-              <Input />
+              <Input value={this.state.email} onChangeText={text => this.setState({email:text})} />
             </Item>
             <Item floatingLabel last>
               <Icon active name='lock' />
               <Label>Password</Label>
-              <Input />
+              <Input value={this.state.pass} onChangeText={text => this.setState({pass:text})} />
             </Item>
 
            
@@ -48,7 +77,7 @@ export default class Login extends Component {
           </Form>
 
           	
-           <Button onPress={() => navigate('Home')} block style={{margin:20, backgroundColor:'grey'}}>
+           <Button onPress={() => this.onButtonPress} block style={{margin:20, backgroundColor:'grey'}}>
             <Text style={{color:'#fff', fontWeight:'bold'}}>MASUK</Text>
             </Button>
 
