@@ -6,10 +6,32 @@ import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, Foote
 import SideBar from '../components/SideBar';
 import SquareMenu from '../components/SquareMenu';
 import Slideshow from 'react-native-image-slider-show';
+import Api from '../api/API';
+import AsyncStorage from '@react-native-community/async-storage';
 
-export default class DrawerExample extends Component {
+export default class Home extends Component {
   
+	constructor(props){
+		super(props);
+		this.state={
 
+		}
+	}
+
+	async componentDidMount(){
+
+		let api = new Api();
+		await api.create();
+		let client = api.getClient();
+		let token = AsyncStorage.getItem('api_token');
+		let user = AsyncStorage.getItem('user');
+		console.log('ini tokennya', token, user)
+		client.post('/home').then((res)=> {
+			console.log('ini resnya: ', res)
+		}).catch((err)=> {
+			console.log('ini errornya:', err)
+		})
+	}
 
 	closeDrawer() {
         this._drawer._root.close()

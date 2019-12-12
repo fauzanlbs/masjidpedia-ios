@@ -1,5 +1,5 @@
 import * as axios from 'axios'
-
+import AsyncStorage from '@react-native-community/async-storage';
 
 class Api {
 
@@ -11,7 +11,7 @@ class Api {
 
   async create(){
       try{
-        this.api_token = localStorage.getItem('token')
+        this.api_token = await AsyncStorage.getItem('api_token')
         // console.log('read api')
       }catch(error){
         console.log('error', error)

@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>B17711EE-1025-4F26-9F60-3762BFBC0BEE</key>
+		<key>9E81519B-8D10-4164-87EF-809E00952577</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>B17711EE-1025-4F26-9F60-3762BFBC0BEE.xcactivitylog</string>
+			<string>9E81519B-8D10-4164-87EF-809E00952577.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -30,13 +30,13 @@
 			<key>signature</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>597402638.27416098</real>
+			<real>597773655.76644802</real>
 			<key>timeStoppedRecording</key>
-			<real>597402639.54458904</real>
+			<real>597773657.27825701</real>
 			<key>title</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>B17711EE-1025-4F26-9F60-3762BFBC0BEE</string>
+			<string>9E81519B-8D10-4164-87EF-809E00952577</string>
 		</dict>
 	</dict>
 </dict>

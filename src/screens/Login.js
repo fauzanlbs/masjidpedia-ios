@@ -2,47 +2,88 @@ import React, { Component } from 'react';
 import {View, Text, Image, ToastAndroid} from 'react-native';
 import { Container, Header, Content, Form, Item, Input, Label, Icon, Button } from 'native-base';
 import Home from './Home';
-import {Api} from '../api/API';
+import Api from '../api/API';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 export default class Login extends Component {
 
 	 constructor(props) {
-         super(props);
+        super(props);
         this.state = {
-          email: '',
-          pass: ''
-        };
-        this.onButtonPress=this.onButtonPress.bind(this);
-
-
+              email: '',
+              pass: ''
+             };
+       this.onButtonPress=this.onButtonPress.bind(this);
+       this.onSubmit = this.onSubmit.bind(this);
     }
+
 
      onButtonPress= () => {
 
-          let api = new Api();
-          api.create();
-          let client = api.getClient();
+      console.log('hit button');
 
-          let data = {
-             email:this.state.email,
-             pass:this.state.pass
-          }
+          // let api = new Api();
+          // api.create();
+          // let client = api.getClient();
 
-          let user = client.post('/login',data).then((res)=>{
-            if(res.status == 200){
-              console.log('ini resnya', res)
-              ToastAndroid.show("login berhasil", ToastAndroid.SHORT)
-              this.props.navigation.navigate('Home')
-            }
+          // let data = {
+          //    email:this.state.email,
+          //    pass:this.state.pass
+          // }
 
-          }).catch((err)=>{
-            console.log('ini errornya', err)
-          })
+          // let user = client.post('/login',data).then((res)=>{
+          //   if(res.status == 200){
+          //     console.log('ini resnya', res)
+          //     ToastAndroid.show("login berhasil", ToastAndroid.SHORT)
+          //     this.props.navigation.navigate('Home')
+          //   }
 
-       alert("ok")
+          // }).catch((err)=>{
+          //   console.log('ini errornya', err)
+          // })
+
+      
         // const { navigate } = this.props.navigation;
         
+        }
+
+      componentWillMount(){
+        console.log('tezz');
+
+      }
+
+        async onSubmit(){
+
+              let api = new Api()
+              console.log('ini api sebelum create', api)
+              await api.create();
+              console.log('ini api setelah create', api)
+              let client = api.getClient()
+             
+              let data = {
+                 customer_email:this.state.email,
+                 customer_password:this.state.pass
+              }
+          
+              console.log('ini datanya: ', data);
+
+              let user = client.post('/login',data).then((res)=>{
+                if(res.data.success){
+                  let user = res.data
+                  console.log('ini resnya', res)
+                  AsyncStorage.setItem('api_token',user.customer_token)
+                  AsyncStorage.setItem('user', JSON.stringify(user.message))
+                  
+                  ToastAndroid.show("login berhasil", ToastAndroid.SHORT)
+                  this.props.navigation.navigate('Home')
+                }else{
+                  console.log('ini responsenya: ',res)
+                }
+
+              }).catch((err)=>{
+                console.log('ini errornya', err)
+              })
         }
 
 
@@ -77,7 +118,7 @@ export default class Login extends Component {
           </Form>
 
           	
-           <Button onPress={() => this.onButtonPress} block style={{margin:20, backgroundColor:'grey'}}>
+           <Button onPress={this.onSubmit} block style={{margin:20, backgroundColor:'grey'}}>
             <Text style={{color:'#fff', fontWeight:'bold'}}>MASUK</Text>
             </Button>
 

@@ -23,7 +23,7 @@ export default class SideBar extends React.Component {
               }}
               source={require('../assets/logo.png')}
             />
-            <View style={{margin:10}}>
+            <View style={{margin:5, marginBottom:5, marginLeft:5}}>
             <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> Fauzan </Text>
             <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> ID : MU39875839 </Text>
             <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> Saldo : Rp 0 </Text>
