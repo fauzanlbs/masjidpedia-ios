@@ -3,9 +3,28 @@ import { AppRegistry, Image, StatusBar, ImageBackground, View } from "react-nati
 import { Container, Content, Text, List, ListItem, Icon } from "native-base";
 const routes = ["Home", "Chat", "Profile"];
 export default class SideBar extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state={
+      user:{}
+    }
+  }
+
+   componentDidMount(){
+
+      // let user = await AsyncStorage.getItem('user');
+      console.log('ini usernyaz', this.props.user)
+      // this.setState({
+      //     user: JSON.parse(this.props.user)
+      // })
+
+      // console.log('ini uzernya', this.state.user)
+     
+  }
  
   render() {
-   
+    console.log('ini lemparannya',this.props.user)
     return (
       <Container>
         <Content>
@@ -24,7 +43,7 @@ export default class SideBar extends React.Component {
               source={require('../assets/logo.png')}
             />
             <View style={{margin:5, marginBottom:5, marginLeft:5}}>
-            <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> Fauzan </Text>
+            <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> {this.props.user} </Text>
             <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> ID : MU39875839 </Text>
             <Text style={{fontSize:17, color:'#fff', fontFamily:'Bahnschrift'}}> Saldo : Rp 0 </Text>
             </View>

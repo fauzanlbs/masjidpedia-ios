@@ -6,6 +6,38 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>45FDE1FF-8F0F-40FD-85DE-879FFF510813</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>45FDE1FF-8F0F-40FD-85DE-879FFF510813.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>masjidpedia project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>masjidpedia</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>597853487.66488802</real>
+			<key>timeStoppedRecording</key>
+			<real>597853490.37744498</real>
+			<key>title</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>45FDE1FF-8F0F-40FD-85DE-879FFF510813</string>
+		</dict>
 		<key>9E81519B-8D10-4164-87EF-809E00952577</key>
 		<dict>
 			<key>className</key>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text, Image, ToastAndroid} from 'react-native';
+import {View, Text, Image, ToastAndroid, Alert} from 'react-native';
 import { Container, Header, Content, Form, Item, Input, Label, Icon, Button } from 'native-base';
 import Home from './Home';
 import Api from '../api/API';
@@ -69,16 +69,37 @@ export default class Login extends Component {
               console.log('ini datanya: ', data);
 
               let user = client.post('/login',data).then((res)=>{
-                if(res.data.success){
+                if(res.data.customer_token){
                   let user = res.data
                   console.log('ini resnya', res)
                   AsyncStorage.setItem('api_token',user.customer_token)
                   AsyncStorage.setItem('user', JSON.stringify(user.message))
+                  Alert.alert(
+                   'Berhasil',
+                    'Login Sukses',
+                    [
+                      
+                      {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                     )
+                      
+                    
+
                   
-                  ToastAndroid.show("login berhasil", ToastAndroid.SHORT)
                   this.props.navigation.navigate('Home')
                 }else{
                   console.log('ini responsenya: ',res)
+                Alert.alert(
+                'Silahkan Coba Lagi',
+                res.data.message,
+                [
+                  
+                  {text: 'OK', onPress: () => console.log('OK Pressed')},
+                ],
+                { cancelable: false }
+              )
+                  
                 }
 
               }).catch((err)=>{

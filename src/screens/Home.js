@@ -14,7 +14,7 @@ export default class Home extends Component {
 	constructor(props){
 		super(props);
 		this.state={
-
+			user:''
 		}
 	}
 
@@ -23,9 +23,14 @@ export default class Home extends Component {
 		let api = new Api();
 		await api.create();
 		let client = api.getClient();
-		let token = AsyncStorage.getItem('api_token');
-		let user = AsyncStorage.getItem('user');
-		console.log('ini tokennya', token, user)
+		let token = await AsyncStorage.getItem('api_token');
+		let userStorage = await AsyncStorage.getItem('user');
+		let user = JSON.parse(userStorage);
+		let email = user.customer_email
+		this.setState({
+			user: email
+		})
+		// console.log('ini usernya', JSON.parse(user));
 		client.post('/home').then((res)=> {
 			console.log('ini resnya: ', res)
 		}).catch((err)=> {
@@ -45,7 +50,7 @@ export default class Home extends Component {
         return (
             <Drawer
                 ref={(ref) => { this._drawer = ref; }}
-                content={<SideBar myNavigation={this.props.navigation} />}
+                content={<SideBar user={this.state.user} myNavigation={this.props.navigation} />}
                 onClose={() => this.closeDrawer()} >
             <Container>
              
