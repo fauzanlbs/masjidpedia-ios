@@ -1,6 +1,7 @@
 import React from "react";
 import { AppRegistry, Image, StatusBar, ImageBackground, View } from "react-native";
 import { Container, Content, Text, List, ListItem, Icon } from "native-base";
+import AsyncStorage from '@react-native-community/async-storage';
 const routes = ["Home", "Chat", "Profile"];
 export default class SideBar extends React.Component {
 
@@ -9,11 +10,28 @@ export default class SideBar extends React.Component {
     this.state={
       user:{}
     }
+
+    this.logout = this.logout.bind(this);
+
   }
 
    componentDidMount(){
 
      
+  }
+
+   async logout(){
+    // console.log('ini logout')
+    try {
+      await AsyncStorage.removeItem('api_token');
+      this.props.myNavigation.navigate('Login');
+      return true;
+    }
+    catch(exception) {
+      return false;
+    }
+    
+
   }
  
   render() {
@@ -77,7 +95,7 @@ export default class SideBar extends React.Component {
           <Icon name='help-circle' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Bantuan</Text>
           </ListItem>
-          <ListItem itemDivider>
+          <ListItem itemDivider onPress={this.logout}>
           <Icon name='log-out' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Log Out</Text>
           </ListItem>
