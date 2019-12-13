@@ -14,7 +14,8 @@ export default class Home extends Component {
 	constructor(props){
 		super(props);
 		this.state={
-			user:''
+			user:'',
+			data:{}
 		}
 	}
 
@@ -32,7 +33,10 @@ export default class Home extends Component {
 		})
 		// console.log('ini usernya', JSON.parse(user));
 		client.post('/home').then((res)=> {
-			console.log('ini resnya: ', res)
+			this.setState({
+				data: res.data
+			})
+			console.log('ini data statenya: ', this.state.data)
 		}).catch((err)=> {
 			console.log('ini errornya:', err)
 		})
@@ -118,13 +122,13 @@ export default class Home extends Component {
 					    </ImageBackground>
 
 					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, textAlign:'left'}} placeholderTextColor='black' /> 
+					    <Text>{this.state.data.title_masjid}</Text>
 
-
-					    <ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:60, width:340}} resizeMode="contain">
+					    <ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:60, width:340}} resizeMode="contain"> 
 	              		<Image style={{ height:30, width:80, margin:5, bottom:10, position:'absolute', right:0}} source={require('../assets/jumlah_masjid_terdaftar.png')}/>
 	                	</ImageBackground>
 
-
+ 
 
 	                <View style={{flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
 

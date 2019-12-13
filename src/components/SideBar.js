@@ -13,13 +13,6 @@ export default class SideBar extends React.Component {
 
    componentDidMount(){
 
-      // let user = await AsyncStorage.getItem('user');
-      console.log('ini usernyaz', this.props.user)
-      // this.setState({
-      //     user: JSON.parse(this.props.user)
-      // })
-
-      // console.log('ini uzernya', this.state.user)
      
   }
  

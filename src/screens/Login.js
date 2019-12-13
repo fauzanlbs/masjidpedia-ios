@@ -69,24 +69,22 @@ export default class Login extends Component {
               console.log('ini datanya: ', data);
 
               let user = client.post('/login',data).then((res)=>{
-                if(res.data.customer_token){
-                  let user = res.data
-                  console.log('ini resnya', res)
-                  AsyncStorage.setItem('api_token',user.customer_token)
-                  AsyncStorage.setItem('user', JSON.stringify(user.message))
-                  Alert.alert(
-                   'Berhasil',
-                    'Login Sukses',
+                if(this.state.email === ''){
+                    Alert.alert(
+                    'Silahkan Coba Lagi',
+                    'Field Tidak Boleh Kosong',
                     [
                       
                       {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
-                     )
-                      
-                    
-
-                  
+                  )
+                }
+                else if(res.data.customer_token){
+                  let user = res.data
+                  console.log('ini resnya', res)
+                  AsyncStorage.setItem('api_token',user.customer_token)
+                  AsyncStorage.setItem('user', JSON.stringify(user.message))   
                   this.props.navigation.navigate('Home')
                 }else{
                   console.log('ini responsenya: ',res)
