@@ -71,19 +71,19 @@ export default class SideBar extends React.Component {
           <Icon name='person' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Profile</Text>
           </ListItem>
-          <ListItem itemDivider>
+          <ListItem itemDivider onPress={()=> this.props.myNavigation.navigate('Notifikasi')}>
           <Icon name='notifications' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Notifikasi</Text>
           </ListItem>
-          <ListItem itemDivider>
+          <ListItem itemDivider onPress={()=> this.props.myNavigation.navigate('RegistrasiMasjid')}>
           <Icon name='business' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Registrasi Masjid</Text>
           </ListItem>
-          <ListItem itemDivider>
+          <ListItem itemDivider onPress={()=> this.props.myNavigation.navigate('RegistrasiKomunitas')}>
           <Icon name='people' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Registrasi Komunitas</Text>
           </ListItem>
-           <ListItem itemDivider>
+           <ListItem itemDivider onPress={()=> this.props.myNavigation.navigate('CustomerService')}>
           <Icon name='chatboxes' style={{color:'grey', width:30}}/> 
           <Text style={{fontFamily:'Bahnschrift', marginLeft:20}}>Customer Service</Text>
           </ListItem>

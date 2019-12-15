@@ -2,13 +2,13 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 
-function RegistrasiMasjid() {
+function Notifikasi() {
   return(
       <View style={{ flex: 1 }}>
-        <Text> Registrasi Masjid </Text>
+        <Text> InsyaAllah akan hadir. </Text>
       </View>
       
   )
 }
 
-export default RegistrasiMasjid;
+export default Notifikasi;

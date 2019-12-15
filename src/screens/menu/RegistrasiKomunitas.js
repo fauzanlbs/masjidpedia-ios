@@ -5,7 +5,7 @@ import {View, Text} from 'react-native';
 function RegistrasiKomunitas() {
   return(
       <View style={{ flex: 1 }}>
-        <Text> Homezzz </Text>
+        <Text> Registrasi Komunitas </Text>
       </View>
       
   )

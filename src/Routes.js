@@ -1,5 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text, Image } from 'react-native';
+// import HeaderComp from './components/Header';
 // import Splash from './screens/Splash';
 import Auth from './screens/Auth';
 import Home from './screens/Home';
@@ -11,9 +12,23 @@ import JadwalSolat from './screens/JadwalSolat';
 import Profile from './screens/menu/Profile';
 import Bantuan from './screens/menu/Bantuan';
 import TentangKami from './screens/menu/TentangKami';
+import CustomerService from './screens/menu/CustomerService';
+import RegistrasiKomunitas from './screens/menu/RegistrasiKomunitas';
+import RegistrasiMasjid from './screens/menu/RegistrasiMasjid';
+import Notifikasi from './screens/menu/Notifikasi';
 
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+
+
+const ImageHeader = props => (
+  
+    <Image source={require('./assets/logofont.png')} style={{
+    width:300,
+    height: 55}} />
+    
+  
+);
 
 
 const AuthStack = createStackNavigator(
@@ -65,6 +80,10 @@ const AppStack = createStackNavigator(
         },
         Profile: {
             screen: Profile,
+            navigationOptions: {
+               headerTitleStyle: { color: '#fff' },
+               header: (props) => <ImageHeader {...props} />,
+            },
 
         },
         Bantuan: {
@@ -73,6 +92,22 @@ const AppStack = createStackNavigator(
         },
         TentangKami: {
             screen: TentangKami,
+
+        },
+        CustomerService: {
+            screen: CustomerService,
+
+        },
+        RegistrasiMasjid: {
+            screen: RegistrasiMasjid,
+
+        },
+        RegistrasiKomunitas: {
+            screen: RegistrasiKomunitas,
+
+        },
+        Notifikasi: {
+            screen: Notifikasi,
 
         }
 

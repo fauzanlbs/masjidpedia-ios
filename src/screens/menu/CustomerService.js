@@ -2,13 +2,13 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 
-function RegistrasiMasjid() {
+function CustomerService() {
   return(
       <View style={{ flex: 1 }}>
-        <Text> Registrasi Masjid </Text>
+        <Text> Customer Service </Text>
       </View>
       
   )
 }
 
-export default RegistrasiMasjid;
+export default CustomerService;

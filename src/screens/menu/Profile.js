@@ -19,36 +19,11 @@ function Profile() {
             </Item>
             <Item floatingLabel>
               <Icon active name='ios-call' />
-              <Label style={{marginLeft:10}}>No HP (0812xxxxxxxx)</Label>
+              <Label style={{marginLeft:10}}>Phone</Label>
               <Input />
             </Item>
-            <View style={{flexDirection:'row', margin:20}}>
-             <Icon active name='ios-mail' />
-             <Label style={{marginLeft:10}}>yulimiranitanjung@gmail.com</Label>
-            </View>
-            <Item floatingLabel>
-              <Icon active name='ios-business' />
-              <Label style={{marginLeft:10}}>Tempat lahir</Label>
-              <Input />
-            </Item>
-             <Item>
-              <Icon active name='date' />
-               <DatePicker
-	            defaultDate={new Date(2018, 4, 4)}
-	            minimumDate={new Date(2018, 1, 1)}
-	            maximumDate={new Date(2018, 12, 31)}
-	            locale={"en"}
-	            timeZoneOffsetInMinutes={undefined}
-	            modalTransparent={false}
-	            animationType={"fade"}
-	            androidMode={"default"}
-	            placeHolderText="Select date"
-	            textStyle={{ color: "green" }}
-	            placeHolderTextStyle={{ color: "#d3d3d3" }}
-	            onDateChange={this.setDate}
-	            disabled={false}
-	            />
-            </Item>
+            
+            
              
              
           </Form>     	
