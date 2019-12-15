@@ -8,7 +8,7 @@ function JadwalSolat() {
   return(
       <Container>
         
-		     <Image style={{ height:230, width:380, margin:2}} source={require('../assets/bg_shubuh.png')} resizeMode="stretch"/>
+		     <Image style={{ height:230, width:380, margin:2}} source={require('../assets/bg_shubuh.png')} resizeMode="cover"/>
 			<View style={{alignItems:'center', justifyContent:'center', margin:10}}>
 		 	<Text style={{margin:5, fontSize:13}}> Jakarta Pusat</Text>
 

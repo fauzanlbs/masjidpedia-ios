@@ -19,13 +19,31 @@ import Notifikasi from './screens/menu/Notifikasi';
 
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Item, Input } from 'native-base';
 
 
 const ImageHeader = props => (
-  
-    <Image source={require('./assets/logofont.png')} style={{
-    width:300,
-    height: 55}} />
+    
+    <Header style={{backgroundColor:'#696969'}}>
+                    <Left>
+                        <Button transparent onPress={()=>props.navigation.goBack(null)}>
+                            <Icon name='arrow-back' style={{color:'gold'}} />
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Image source={require('./assets/logofont.png')} style={{
+                        width:300,
+                        height: 35}} resizeMode="contain"/>
+                        
+                    </Body>
+                    <Right>
+                        <Button transparent>
+                         <Icon name='search' style={{color:'gold'}}/>
+                        </Button>
+                    </Right>
+    </Header>
+
+   
     
   
 );
@@ -76,39 +94,53 @@ const AppStack = createStackNavigator(
         },
         JadwalSolat: {
             screen: JadwalSolat,
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
 
         },
         Profile: {
             screen: Profile,
             navigationOptions: {
-               headerTitleStyle: { color: '#fff' },
-               header: (props) => <ImageHeader {...props} />,
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
             },
 
         },
         Bantuan: {
             screen: Bantuan,
-
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
         },
         TentangKami: {
             screen: TentangKami,
-
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
         },
         CustomerService: {
             screen: CustomerService,
-
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
         },
         RegistrasiMasjid: {
             screen: RegistrasiMasjid,
-
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
         },
         RegistrasiKomunitas: {
             screen: RegistrasiKomunitas,
-
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
         },
         Notifikasi: {
             screen: Notifikasi,
-
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
         }
 
     });
