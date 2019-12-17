@@ -17,6 +17,10 @@ import RegistrasiKomunitas from './screens/menu/RegistrasiKomunitas';
 import RegistrasiMasjid from './screens/menu/RegistrasiMasjid';
 import Notifikasi from './screens/menu/Notifikasi';
 
+//quran
+import ListSurah from './screens/quran/ListSurah';
+import DetailSurah from './screens/quran/DetailSurah';
+
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Item, Input } from 'native-base';
@@ -141,7 +145,19 @@ const AppStack = createStackNavigator(
             navigationOptions: {
                header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
             },
-        }
+        },
+        ListSurah: {
+            screen: ListSurah,
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
+        },
+        DetailSurah: {
+            screen: DetailSurah,
+            navigationOptions: {
+               header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+            },
+        },
 
     });
 

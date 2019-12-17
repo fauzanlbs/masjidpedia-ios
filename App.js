@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './src/screens/Login';
 import Auth from './src/screens/Auth';
 import Routes from './src/Routes';
-import Test from './src/Test';
 
 
 export default function App() {

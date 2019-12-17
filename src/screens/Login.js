@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {View, Text, Image, ToastAndroid, Alert} from 'react-native';
 import { Container, Header, Content, Form, Item, Input, Label, Icon, Button } from 'native-base';
 import Home from './Home';
-import Api from '../api/API';
+import Api from '../api/server';
 import AsyncStorage from '@react-native-community/async-storage';
 
 
@@ -14,46 +14,15 @@ export default class Login extends Component {
               email: '',
               pass: ''
              };
-       this.onButtonPress=this.onButtonPress.bind(this);
        this.onSubmit = this.onSubmit.bind(this);
     }
 
+    componentWillMount(){
+      console.log('tezz');
 
-     onButtonPress= () => {
+    }
 
-      console.log('hit button');
-
-          // let api = new Api();
-          // api.create();
-          // let client = api.getClient();
-
-          // let data = {
-          //    email:this.state.email,
-          //    pass:this.state.pass
-          // }
-
-          // let user = client.post('/login',data).then((res)=>{
-          //   if(res.status == 200){
-          //     console.log('ini resnya', res)
-          //     ToastAndroid.show("login berhasil", ToastAndroid.SHORT)
-          //     this.props.navigation.navigate('Home')
-          //   }
-
-          // }).catch((err)=>{
-          //   console.log('ini errornya', err)
-          // })
-
-      
-        // const { navigate } = this.props.navigation;
-        
-        }
-
-      componentWillMount(){
-        console.log('tezz');
-
-      }
-
-        async onSubmit(){
+    async onSubmit(){
 
               let api = new Api()
               console.log('ini api sebelum create', api)

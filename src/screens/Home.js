@@ -6,7 +6,7 @@ import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, Foote
 import SideBar from '../components/SideBar';
 import SquareMenu from '../components/SquareMenu';
 import Slideshow from 'react-native-image-slider-show';
-import Api from '../api/API';
+import Api from '../api/server';
 import AsyncStorage from '@react-native-community/async-storage';
 
 export default class Home extends Component {
@@ -146,7 +146,7 @@ export default class Home extends Component {
 
 							<View>
 
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity onPress={()=>this.props.navigation.navigate('ListSurah')} style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/baca_quran.png')}/>
 							</TouchableOpacity>
