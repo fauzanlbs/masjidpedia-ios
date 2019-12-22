@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
@@ -16,6 +15,10 @@
 		8434CA3E2366F9F60026FF32 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8434CA3D2366F9F60026FF32 /* icon.jpg */; };
 		8434CA40236701DB0026FF32 /* icon_remove_tr.png in Resources */ = {isa = PBXBuildFile; fileRef = 8434CA3F236701DB0026FF32 /* icon_remove_tr.png */; };
 		F702EF118D0A429FB808086C /* Bahnschrift_Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7B83F935DA5A46E4B035C036 /* Bahnschrift_Light.TTF */; };
+		443242567B2849D594FADA1C /* Amiri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98C6EFBD576B4884888CC04D /* Amiri-Bold.ttf */; };
+		2D05CCCC42D44E40AE6AD544 /* Amiri-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6F61EC923174F8BA90F553F /* Amiri-BoldItalic.ttf */; };
+		4A9522A0D2084E2BA09D6A15 /* Amiri-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E708E507510492983BA4B03 /* Amiri-Italic.ttf */; };
+		8D2167BA45FC45BBADC9408D /* Amiri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1FA2A6CC3B45DC92C12671 /* Amiri-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,10 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F381F79ED5F02BB066B4750E /* Pods-masjidpedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-masjidpedia.debug.xcconfig"; path = "Target Support Files/Pods-masjidpedia/Pods-masjidpedia.debug.xcconfig"; sourceTree = "<group>"; };
+		98C6EFBD576B4884888CC04D /* Amiri-Bold.ttf */ = {isa = PBXFileReference; name = "Amiri-Bold.ttf"; path = "../assets/fonts/Amiri-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B6F61EC923174F8BA90F553F /* Amiri-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Amiri-BoldItalic.ttf"; path = "../assets/fonts/Amiri-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E708E507510492983BA4B03 /* Amiri-Italic.ttf */ = {isa = PBXFileReference; name = "Amiri-Italic.ttf"; path = "../assets/fonts/Amiri-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4B1FA2A6CC3B45DC92C12671 /* Amiri-Regular.ttf */ = {isa = PBXFileReference; name = "Amiri-Regular.ttf"; path = "../assets/fonts/Amiri-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				7B83F935DA5A46E4B035C036 /* Bahnschrift_Light.TTF */,
+				98C6EFBD576B4884888CC04D /* Amiri-Bold.ttf */,
+				B6F61EC923174F8BA90F553F /* Amiri-BoldItalic.ttf */,
+				5E708E507510492983BA4B03 /* Amiri-Italic.ttf */,
+				4B1FA2A6CC3B45DC92C12671 /* Amiri-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -194,6 +205,10 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				F702EF118D0A429FB808086C /* Bahnschrift_Light.TTF in Resources */,
+				443242567B2849D594FADA1C /* Amiri-Bold.ttf in Resources */,
+				2D05CCCC42D44E40AE6AD544 /* Amiri-BoldItalic.ttf in Resources */,
+				4A9522A0D2084E2BA09D6A15 /* Amiri-Italic.ttf in Resources */,
+				8D2167BA45FC45BBADC9408D /* Amiri-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

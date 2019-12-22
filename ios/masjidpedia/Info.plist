@@ -70,7 +70,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow masjidpedia to access your microphone</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Allow masjidpedia to access your device&apos;s accelerometer</string>
+	<string>Allow masjidpedia to access your device's accelerometer</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Give masjidpedia periences permission to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -80,6 +80,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Bahnschrift_Light.TTF</string>
+		<string>Amiri-Regular.ttf</string>
+		<string>Amiri-Bold.ttf</string>
+		<string>Amiri-BoldItalic.ttf</string>
+		<string>Amiri-Italic.ttf</string>
 	</array>
 </dict>
 </plist>
