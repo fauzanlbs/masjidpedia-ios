@@ -258,9 +258,9 @@ export default class Home extends Component {
 						  </View>
 						
 		</View>
-	                    
+	    <TouchableOpacity onPress={()=> {this.props.navigation.navigate('Islampedia')}}>                
 		<Image source={require('../assets/banner_islampedia.png')} style={{borderRadius:5, height:60, width:350}} resizeMode="stretch" />
-
+		</TouchableOpacity>
 
 		<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
 					<View style={{flexDirection:'row',margin:3}}>

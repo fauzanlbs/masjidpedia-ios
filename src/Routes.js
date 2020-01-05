@@ -21,6 +21,9 @@ import Notifikasi from './screens/menu/Notifikasi';
 import ListSurah from './screens/quran/ListSurah';
 import DetailSurah from './screens/quran/DetailSurah';
 
+//islampedia
+import Islampedia from './screens/islampedia/Islampedia';
+
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Item, Input } from 'native-base';
@@ -158,6 +161,13 @@ const AppStack = createStackNavigator(
                header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
             },
         },
+        Islampedia: {
+            screen: Islampedia,
+            navigationOptions: {
+                header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+             },
+            
+        }
 
     });
 
