@@ -21,7 +21,7 @@ function Bantuan() {
         <Text style={{ fontFamily:'Bahnschrift'}}>
 
         <Text style={{ fontFamily:'Bahnschrift', fontWeight:'bold', margin:10}}>Cara Download Aplikasi Masjidpedia</Text>{"\n"}
-        1. Buka Aplikasi Play Store. {"\n"}
+        1. Buka Aplikasi App Store. {"\n"}
         2. Lakukan pencarian Masjidpedia. {"\n"}
         3. Klik Masjidpedia. {"\n"}
         4. Klik Install. {"\n"}

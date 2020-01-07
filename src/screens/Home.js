@@ -133,14 +133,14 @@ export default class Home extends Component {
 	                <View style={{flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
 
 							<View>
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+
+							<TouchableOpacity onPress={()=>this.props.navigation.navigate('ListSurah')} style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
 							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/masjidku.png')}/>
 							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Mesjid-ku </Text>
+							<View style={{margin:3}}>
+							<Text style={{fontSize:12, width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Masjid </Text>
 							</View>
-							
 							</View>
 
 
@@ -150,8 +150,8 @@ export default class Home extends Component {
 							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/baca_quran.png')}/>
 							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Qur'an </Text>
+							<View style={{margin:3}}>
+							<Text style={{fontSize:12, width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Qur'an </Text>
 							</View>
 							</View>
 
@@ -161,8 +161,8 @@ export default class Home extends Component {
 							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/kiblat.png')}/>
 							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Kiblat </Text>
+							<View style={{margin:3}}>
+							<Text style={{fontSize:12, width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Kiblat </Text>
 							</View>
 							</View>
 
@@ -172,8 +172,8 @@ export default class Home extends Component {
 							<Image style={{ height:80, width:80, margin:2}}
 							        source={require('../assets/donasi.png')}/>
 							</TouchableOpacity>
-							<View>
-							<Text style={{fontSize:12, fontWeight:'bold', width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Donasi </Text>
+							<View style={{margin:3}}>
+							<Text style={{fontSize:12,  width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Donasi </Text>
 							</View>
 							</View>
 
