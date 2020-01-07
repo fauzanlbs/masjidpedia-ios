@@ -7,6 +7,7 @@ import Home from './screens/Home';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import JadwalSolat from './screens/JadwalSolat';
+import MasjidTerdaftar from './screens/MasjidTerdaftar';
 
 //sidebar
 import Profile from './screens/menu/Profile';
@@ -163,6 +164,13 @@ const AppStack = createStackNavigator(
         },
         Islampedia: {
             screen: Islampedia,
+            navigationOptions: {
+                header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
+             },
+            
+        },
+        MasjidTerdaftar: {
+            screen: MasjidTerdaftar,
             navigationOptions: {
                 header: (props) => <ImageHeader {...props} navigation={props.navigation}/>,
              },

@@ -5,7 +5,7 @@ import {View, Text} from 'react-native';
 function MasjidTerdaftar() {
   return(
       <View style={{ flex: 1 }}>
-        <Text> Homezzz </Text>
+        <Text> Masjid Terdaftar </Text>
       </View>
       
   )

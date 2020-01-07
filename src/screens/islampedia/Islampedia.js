@@ -1,20 +1,21 @@
 import React from 'react';
-import {View, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
+import {View, Text, Image, Dimensions, TouchableOpacity, ImageBackground} from 'react-native';
 
 const screenWidth = Dimensions.get('window').width;
 
 function Islampedia() {
   return(
-      <View style={{ flex: 1 }}>
-      	
+      <View style={{justifyContent:'center', alignSelf:'center', alignItems:'center'}}>
+      	<ImageBackground source={require('../../assets/bg.png')} style={{ flex:1,
+        width: null,
+            height: null}}  resizeMode="cover">
+
         <Image source={require('../../assets/banner_islampedia.png')} style={{margin: 10,alignSelf: 'center',borderRadius:5, height:60, width:screenWidth}} resizeMode="cover" />
 
-       
+         			<View style={{flexDirection:'row',justifyContent: 'space-between', margin:10}}>
 
-         			<View style={{margin:10,flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
-
-							<View style={{marginLeft:5, marginRight:5}}>
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<View>
+							<TouchableOpacity style={{margin:10}}>
 							<Image style={{ height:100, width:100, margin:2}}
 							        source={require('../../assets/icon_hadits.png')}/>
 							</TouchableOpacity>
@@ -25,9 +26,9 @@ function Islampedia() {
 							</View>
 
 
-							<View style={{marginLeft:5, marginRight:5}}>
+							<View>
 
-							<TouchableOpacity onPress={()=>this.props.navigation.navigate('ListSurah')} style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:10}}>
 							<Image style={{ height:100, width:100, margin:2}}
 							        source={require('../../assets/fiqh.png')}/>
 							</TouchableOpacity>
@@ -36,9 +37,9 @@ function Islampedia() {
 							</View>
 							</View>
 
-							<View style={{marginLeft:5, marginRight:5}}>
+							<View>
 
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:10}}>
 							<Image style={{ height:100, width:100, margin:2}}
 							        source={require('../../assets/asmaul_husna.png')}/>
 							</TouchableOpacity>
@@ -51,10 +52,10 @@ function Islampedia() {
 	               </View>
 
 
-	               <View style={{margin:10,flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
+	               <View style={{flexDirection:'row',justifyContent: 'space-between', margin:10}}>
 
-							<View style={{marginLeft:5, marginRight:5}}>
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<View>
+							<TouchableOpacity style={{margin:10}}>
 							<Image style={{ height:100, width:100, margin:2}}
 							        source={require('../../assets/dzikir_doa.png')}/>
 							</TouchableOpacity>
@@ -65,9 +66,9 @@ function Islampedia() {
 							</View>
 
 
-							<View style={{marginLeft:5, marginRight:5}}>
+							<View>
 
-							<TouchableOpacity onPress={()=>this.props.navigation.navigate('ListSurah')} style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:10}}>
 							<Image style={{ height:100, width:100, margin:2}}
 							        source={require('../../assets/sirah.png')}/>
 							</TouchableOpacity>
@@ -76,9 +77,9 @@ function Islampedia() {
 							</View>
 							</View>
 
-							<View style={{marginLeft:5, marginRight:5}}>
+							<View>
 
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<TouchableOpacity style={{margin:10}}>
 							<Image style={{ height:100, width:100, margin:2}}
 							        source={require('../../assets/adab_akhlak.png')}/>
 							</TouchableOpacity>
@@ -91,10 +92,10 @@ function Islampedia() {
 	               </View>
 
 
-	               <View style={{margin:10,flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
+	                <View style={{flexDirection:'row',justifyContent: 'space-between', margin:10}}>
 
-							<View style={{marginLeft:5, marginRight:5}}>
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
+							<View>
+							<TouchableOpacity style={{margin:10}}>
 							<Image style={{ height:100, width:100, margin:2}}
 							        source={require('../../assets/kelola_masjid.png')}/>
 							</TouchableOpacity>
@@ -109,7 +110,7 @@ function Islampedia() {
 	
 
 	               </View>
-
+	      </ImageBackground>
       </View>
       
   )
