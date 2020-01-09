@@ -1,14 +1,18 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Dimensions} from 'react-native';
 import { Container, Header, Content, Button, ListItem, Icon, Left, Body, Right, Switch } from 'native-base';
 
+const screenWidth = Dimensions.get('window').width;
 
 
 function JadwalSolat() {
   return(
       <Container>
-        
-		     <Image style={{ height:230, width:380, margin:2}} source={require('../assets/bg_shubuh.png')} resizeMode="cover"/>
+        <Content>
+		    
+         <View style={{alignItems:'center', justifyContent:'center'}}>
+       <Image style={{ height:280, width:screenWidth, margin:2}} source={require('../assets/bg_shubuh.png')} resizeMode="stretch"/>
+        </View>
 			<View style={{alignItems:'center', justifyContent:'center', margin:10}}>
 		 	<Text style={{margin:5, fontSize:13}}> Jakarta Pusat</Text>
 
@@ -87,6 +91,7 @@ function JadwalSolat() {
           </ListItem>
         </View>
 	   
+     </Content>
       </Container>
       
   )
