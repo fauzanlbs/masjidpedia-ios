@@ -8,6 +8,7 @@ import SquareMenu from '../components/SquareMenu';
 import Slideshow from 'react-native-image-slider-show';
 import Api from '../api/server';
 import AsyncStorage from '@react-native-community/async-storage';
+import moment from 'moment';
 
 export default class Home extends Component {
   
@@ -15,12 +16,18 @@ export default class Home extends Component {
 		super(props);
 		this.state={
 			user:'',
-			data:{}
+			data:{},
+			currentTime: `${new Date().getHours().toLocaleString()}:${new Date().getMinutes().toLocaleString()}`,
+			currentDay: moment().format("DD MMMM YYYY"),
+			location: ''
 		}
+
+		this.tick = this.tick.bind(this);
 	}
 
 	async componentDidMount(){
 
+		this._getCoordinat()
 		let api = new Api();
 		await api.create();
 		let client = api.getClient();
@@ -40,7 +47,52 @@ export default class Home extends Component {
 		}).catch((err)=> {
 			console.log('ini errornya:', err)
 		})
+
+		this.timerID = setInterval(
+			() => this.tick(),
+			1000
+		  );
 	}
+
+
+	fetchLocation(lat,lon){
+		let myGoogleKey = 'AIzaSyAatwH2oV7qgq93zsuFGQSbZJdPv2KtPCY'
+		fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + lat + ',' + lon + '&key=' + myGoogleKey)
+        .then((response) => response.json())
+        .then((responseJson) => {
+			// console.log('ADDRESS GEOCODE is BACK!! => ' + JSON.stringify(responseJson));
+			this.setState({
+				location: responseJson.results[0]['formatted_address']
+			})
+			// console.log(responseJson.results[0]['formatted_address']);
+			})
+	}
+
+
+	_getCoordinat(){
+		//Get location
+		navigator.geolocation.getCurrentPosition((position) => {
+				// this.setState({
+				// 	 latitude: position.coords.latitude,
+				// 	 longitude: position.coords.longitude
+				// });
+				this.fetchLocation(position.coords.latitude,position.coords.longitude)
+			},
+			(error) => console.log( "Error get location", error.message ),
+			{ enableHighAccuracy: false, timeout: 20000, maximumAge: 10000 },
+		);
+	}
+
+	componentWillUnmount() {
+        clearInterval(this.timerID);
+      }
+
+	  tick() {
+        this.setState({
+			currentTime: `${new Date().getHours().toLocaleString()}:${new Date().getMinutes().toLocaleString()}`
+        });
+	  }
+	 
 
 	closeDrawer() {
         this._drawer._root.close()
@@ -91,14 +143,14 @@ export default class Home extends Component {
 	                	<View style={{ alignItems:'center',flexDirection:'column', flex:1, marginTop:20}}>
 	                    <TouchableOpacity onPress={()=> {this.props.navigation.navigate('JadwalSolat')}} style={{ alignItems:'center',height:130, width:130, borderRadius:100, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
 	                    <Text style={{color:'#fff', marginTop:20}}> Dzuhur </Text>
-	                    <Text style={{fontSize:45, color:'#fff'}}> 12:08 </Text>
+	                    <Text style={{fontSize:45, color:'#fff'}}> {this.state.currentTime} </Text>
 	                    <Text style={{color:'#fff'}}> -02:37:12 </Text>
 	                    </TouchableOpacity>
 
-	                    <Text style={{margin:5, fontSize:12}}> Menteng, Jakarta Pusat</Text>
+		<Text style={{margin:5, fontSize:12}}>{this.state.location}</Text>
 
 	                    <View style={{alignItems:'center', justifyContent:'center', height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
-	                    <Text style={{color:'#fff', textAlign:'center', fontFamily:'Bahnschrift'}}> 11 September 2019 | 11 Muharram 1441 H </Text>                    
+	                    <Text style={{color:'#fff', textAlign:'center', fontFamily:'Bahnschrift'}}> {this.state.currentDay} | 11 Muharram 1441 H </Text>                    
 	                    </View>
 
 	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
@@ -121,12 +173,14 @@ export default class Home extends Component {
 					    
 					    </ImageBackground>
 
-					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, textAlign:'left'}} placeholderTextColor='black' /> 
+					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, padding:10,textAlign:'left'}} placeholderTextColor='black' placeholder="Mesin pencari Artikel Islami ..." /> 
 					    {/*<Text>{this.state.data.title_masjid}</Text>*/}
 
-					    <TouchableOpacity onPress={()=>{this.props.navigation.navigate('MasjidTerdaftar')}}>
-					    <ImageBackground source={require('../assets/masjid_terdaftar_block.png')} style={{borderRadius:5, height:60, width:340}} resizeMode="contain"> 
+					    <TouchableOpacity onPress={()=>{this.props.navigation.navigate('MasjidTerdaftar')}} style={{flex: 1, flexDirection: 'row'}}>
+					    <ImageBackground source={require('../assets/masjid_terdaftar_block_polos.png')} style={{borderRadius:5, height:60, width:340}} resizeMode="contain"> 
+						<Text style={{ position:'absolute', left:0, bottom:10, margin:11}}> {this.state.data.title_masjid} </Text>
 	              		<Image style={{ height:30, width:80, margin:5, bottom:10, position:'absolute', right:0}} source={require('../assets/jumlah_masjid_terdaftar.png')}/>
+						 
 	                	</ImageBackground>
 	                	</TouchableOpacity>
  
@@ -196,13 +250,13 @@ export default class Home extends Component {
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
-		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={1} titleStyle={{color:'#fff', fontSize:12, fontFamily:'Bahnschrift'}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:14}} 
+		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={10} titleStyle={{color:'#fff', fontSize:12, fontFamily:'Bahnschrift'}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:14}} 
 							      dataSource={[
 							        {
 								    caption: 'Ini kota di AS yang Penduduknya Mayoritas Muslim',
-								    url:'http://placeimg.com/640/480/nature' },
-														        { url:'http://placeimg.com/640/480/nature' },
-														        { url:'http://placeimg.com/640/480/nature' }
+								    url:"https://dev.mymasjidpedia.id/media/image/gallery/Gallery-8905db13e2537fd1.jpg" },
+														        { url:"https://dev.mymasjidpedia.id/media/image/gallery/Gallery-26615d9b419c42c04.jpg" },
+														        { url:"https://dev.mymasjidpedia.id/media/image/gallery/Gallery-26615d89847c0c6aa.jpg" }
 							    ]} resizeMode="contain" height={200} />
 						  </View>
 						

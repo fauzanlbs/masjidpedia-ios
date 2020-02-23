@@ -4,9 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Amiri-Bold.ttf</key>
+		<data>
+		XmvQ/IuPyFXBsmBN9qJLROILcVA=
+		</data>
+		<key>Amiri-BoldItalic.ttf</key>
+		<data>
+		jBsB1EFk2bruy5dl99BRACbGGwA=
+		</data>
+		<key>Amiri-Italic.ttf</key>
+		<data>
+		2TZuG+VwR9w6Z17stvku9oomaiE=
+		</data>
+		<key>Amiri-Regular.ttf</key>
+		<data>
+		MVbp/kytZfn3ys8SxkFlJg0/xmc=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		RPfsyvm0QGjd2UtTkN4KyDWHi/0=
+		JtLHJdH6arxfGmLKoe4A8WvKH1E=
 		</data>
 		<key>Bahnschrift_Light.TTF</key>
 		<data>
@@ -14,11 +30,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		lH65as7V12k6vhRYwb3XiyfhkE4=
+		Xi4q2c63PnkbY4MaikXjyRncbmU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zGMLSA9t6YrF0wgZg4olPqcIJg4=
+		4r651C1Z690kYaBfJrl/4tciOQg=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -39,15 +55,59 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Amiri-Bold.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XmvQ/IuPyFXBsmBN9qJLROILcVA=
+			</data>
+			<key>hash2</key>
+			<data>
+			Y5DR/wRLmfp5UqvBIc/AmcYuJ+/QaMkCowuwPpd0r2w=
+			</data>
+		</dict>
+		<key>Amiri-BoldItalic.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jBsB1EFk2bruy5dl99BRACbGGwA=
+			</data>
+			<key>hash2</key>
+			<data>
+			O0Q8AX2gtWSJhZUu1Wx940RAuJa6Wlr2ttsCQOTR/Ps=
+			</data>
+		</dict>
+		<key>Amiri-Italic.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2TZuG+VwR9w6Z17stvku9oomaiE=
+			</data>
+			<key>hash2</key>
+			<data>
+			xvyLlNjk8AHvpqGqiVU89KfOPAVLwJPRBz6kl64GRzQ=
+			</data>
+		</dict>
+		<key>Amiri-Regular.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MVbp/kytZfn3ys8SxkFlJg0/xmc=
+			</data>
+			<key>hash2</key>
+			<data>
+			82FbCMw9eECUdMKO18ng+1zEJDXhIICjheGkFjq0Zwg=
+			</data>
+		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RPfsyvm0QGjd2UtTkN4KyDWHi/0=
+			JtLHJdH6arxfGmLKoe4A8WvKH1E=
 			</data>
 			<key>hash2</key>
 			<data>
-			fAIbX7SDP3a69qvyrsxk1gW5Sm8ECs6yFAmCdSHiCNU=
+			T98w3z3MeeHf7G/cAAvCBZzsYN1QYAv4UD7UeboaPL0=
 			</data>
 		</dict>
 		<key>Bahnschrift_Light.TTF</key>
@@ -65,11 +125,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lH65as7V12k6vhRYwb3XiyfhkE4=
+			Xi4q2c63PnkbY4MaikXjyRncbmU=
 			</data>
 			<key>hash2</key>
 			<data>
-			6o7gPefYwtr8TTGfnfKIBcG5dYBis8X/Lu6cGL8LDmA=
+			glgte9tZCP7Cmew5ga42iDE5CkBLR3xl0eUyLaZpsEE=
 			</data>
 		</dict>
 		<key>icon.jpg</key>

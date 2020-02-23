@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>A96B72E3-15A3-4D9F-B27C-320751C1C249</key>
+		<key>8A2E1D55-1330-4C03-8FEC-47C74BFA9E5F</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>A96B72E3-15A3-4D9F-B27C-320751C1C249.xcactivitylog</string>
+			<string>8A2E1D55-1330-4C03-8FEC-47C74BFA9E5F.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -30,15 +30,15 @@
 			<key>signature</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>598626875.75462496</real>
+			<real>604126234.12360597</real>
 			<key>timeStoppedRecording</key>
-			<real>598626877.677145</real>
+			<real>604126235.77290702</real>
 			<key>title</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>A96B72E3-15A3-4D9F-B27C-320751C1C249</string>
+			<string>8A2E1D55-1330-4C03-8FEC-47C74BFA9E5F</string>
 		</dict>
-		<key>F04A64B4-56AD-4F17-B4F3-F2598BE25322</key>
+		<key>D1324569-255B-4169-B7A9-6F7620F450C4</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -47,7 +47,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F04A64B4-56AD-4F17-B4F3-F2598BE25322.xcactivitylog</string>
+			<string>D1324569-255B-4169-B7A9-6F7620F450C4.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -62,13 +62,13 @@
 			<key>signature</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>598287914.56222606</real>
+			<real>604146217.73134899</real>
 			<key>timeStoppedRecording</key>
-			<real>598287916.62497795</real>
+			<real>604146219.67715096</real>
 			<key>title</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>F04A64B4-56AD-4F17-B4F3-F2598BE25322</string>
+			<string>D1324569-255B-4169-B7A9-6F7620F450C4</string>
 		</dict>
 	</dict>
 </dict>
