@@ -85,8 +85,8 @@ render(){
 			<View style={{alignItems:'center', justifyContent:'center', margin:10}}>
 		 	<Text style={{margin:5, fontSize:13}}> {this.state.jadwalAll.state}</Text>
 
-	        <View style={{ justifyContent:'center', height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
-  <Text style={{color:'#fff', textAlign:'center', fontFamily:'Bahnschrift'}}> {this.state.currentDay} | 11 Muharram 1441 H</Text>                    
+	        <View style={{alignItems:'center',justifyContent:'center', height:30, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+  <Text style={{color:'#fff', fontFamily:'Bahnschrift'}}> {this.state.currentDay} | 11 Muharram 1441 H</Text>                    
 	        </View>
 	        </View>
 

@@ -149,8 +149,8 @@ export default class Home extends Component {
 
 		<Text style={{margin:5, fontSize:12}}>{this.state.location}</Text>
 
-	                    <View style={{alignItems:'center', justifyContent:'center', height:20, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
-	                    <Text style={{color:'#fff', textAlign:'center', fontFamily:'Bahnschrift'}}> {this.state.currentDay} | 11 Muharram 1441 H </Text>                    
+	                    <View style={{alignItems:'center', justifyContent:'center', height:30, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
+	                    <Text style={{color:'#fff', fontFamily:'Bahnschrift'}}> {this.state.currentDay} | 11 Muharram 1441 H </Text>                    
 	                    </View>
 
 	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
@@ -173,7 +173,7 @@ export default class Home extends Component {
 					    
 					    </ImageBackground>
 
-					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, padding:10,textAlign:'left'}} placeholderTextColor='black' placeholder="Mesin pencari Artikel Islami ..." /> 
+					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, padding:10,textAlign:'left'}} placeholderTextColor='black' placeholder="Ketik Topik Islami Yang Anda Cari ..." /> 
 					    {/*<Text>{this.state.data.title_masjid}</Text>*/}
 
 					    <TouchableOpacity onPress={()=>{this.props.navigation.navigate('MasjidTerdaftar')}} style={{flex: 1, flexDirection: 'row'}}>
@@ -245,7 +245,7 @@ export default class Home extends Component {
 					
         </ImageBackground>
         <View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
-					<View style={{flexDirection:'row',margin:3}}>
+					<View style={{flexDirection:'row',margin:3, alignItems:'center'}}>
                     <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> BERITA ISLAMI </Text>
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
@@ -264,7 +264,7 @@ export default class Home extends Component {
 
 
 			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
-					<View style={{flexDirection:'row',margin:3}}>
+					<View style={{flexDirection:'row',margin:3, alignItems:'center'}}>
                     <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> INFO KAJIAN </Text>
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
@@ -304,7 +304,7 @@ export default class Home extends Component {
 		</View>
 
 			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
-					<View style={{flexDirection:'row',margin:3}}>
+					<View style={{flexDirection:'row',margin:3, alignItems:'center'}}>
                     <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> MUTIARA HADIST </Text>
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
                     </View>
