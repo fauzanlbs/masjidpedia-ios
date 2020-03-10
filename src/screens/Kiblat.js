@@ -1,14 +1,12 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React from "react";
+import { View, Text } from "react-native";
 
-
-function MasjidTerdaftar() {
-  return(
-      <View style={{ flex: 1 }}>
-        <Text> Homezzz </Text>
-      </View>
-      
-  )
+function Kiblat() {
+  return (
+    <View style={{ flex: 1 }}>
+      <Text> Kiblat </Text>
+    </View>
+  );
 }
 
-export default MasjidTerdaftar;
+export default Kiblat;

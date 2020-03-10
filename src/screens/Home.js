@@ -1,14 +1,14 @@
 
-
 import React, { Component } from 'react';
-import { View, ImageBackground, Dimensions, Image, TouchableOpacity, ScrollView, TextInput, Text } from 'react-native';
-import { Card, CardItem,Drawer, Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Item, Input } from 'native-base';
+import { View, ImageBackground, Image, TouchableOpacity, ScrollView, TextInput, Text, StyleSheet } from 'react-native';
+import { Drawer, Container, Header, Content, Button, Left, Right, Body, Icon } from 'native-base';
 import SideBar from '../components/SideBar';
-import SquareMenu from '../components/SquareMenu';
 import Slideshow from 'react-native-image-slider-show';
 import Api from '../api/server';
 import AsyncStorage from '@react-native-community/async-storage';
 import moment from 'moment';
+import axios from 'axios';
+import SquareMenu from '../components/SquareMenu'
 
 export default class Home extends Component {
   
@@ -19,15 +19,18 @@ export default class Home extends Component {
 			data:{},
 			currentTime: `${new Date().getHours().toLocaleString()}:${new Date().getMinutes().toLocaleString()}`,
 			currentDay: moment().format("DD MMMM YYYY"),
-			location: ''
+			location: '',
+			jadwal: [],
+			hijri:''
 		}
 
 		this.tick = this.tick.bind(this);
 	}
 
 	async componentDidMount(){
-
 		this._getCoordinat()
+		this.fetchDataSolat()
+
 		let api = new Api();
 		await api.create();
 		let client = api.getClient();
@@ -38,12 +41,14 @@ export default class Home extends Component {
 		this.setState({
 			user: email
 		})
-		// console.log('ini usernya', JSON.parse(user));
 		client.post('/home').then((res)=> {
+			const hijri = new Intl.DateTimeFormat('fr-TN-u-ca-islamic', {day: 'numeric', month: 'long',year : 'numeric'}).format(Date.now());	
 			this.setState({
-				data: res.data
+				data: res.data,
+				hijri
 			})
 			console.log('ini data statenya: ', this.state.data)
+			console.log('ini data hijri', this.state.hijri)
 		}).catch((err)=> {
 			console.log('ini errornya:', err)
 		})
@@ -83,6 +88,26 @@ export default class Home extends Component {
 		);
 	}
 
+	fetchDataSolat(){
+  
+		let token = '9898e4c17ec6d4ad3432a0bfd152202c';
+		this.state.latitude = '3.2219665'
+		this.state.longitude = '101.7210999'
+		// let url = `https://muslimsalat.com/daily.json?latitude=${this.state.latitude}&&longitute=${this.state.longitude}&&key=${token}`;
+		axios.get(`https://muslimsalat.com/kualalumpur.json?key=${token}`).then(res => {
+		  this.setState({
+			jadwal: res.data.items[0],
+		  })
+		  console.log('jadwal solat home', this.state.jadwal);
+
+		  const jadwal = [res.data.items[0]['fajr'], res.data.items[0]['dhuhr'], res.data.items[0]['asr'], res.data.items[0]['maghrib'], res.data.items[0]['isha']];
+		  const sekarang = moment();
+		  const terdekat = jadwal.find((item)=> {return moment(item, "hh:mm a").format('HH:mm:ss') > moment(sekarang, "hh:mm a").format('HH:mm:ss')});
+		  console.log('terdekat', terdekat);
+		})
+		
+	  }
+
 	componentWillUnmount() {
         clearInterval(this.timerID);
       }
@@ -91,8 +116,7 @@ export default class Home extends Component {
         this.setState({
 			currentTime: `${new Date().getHours().toLocaleString()}:${new Date().getMinutes().toLocaleString()}`
         });
-	  }
-	 
+	  } 
 
 	closeDrawer() {
         this._drawer._root.close()
@@ -100,7 +124,6 @@ export default class Home extends Component {
     openDrawer() {
         this._drawer._root.open()
     };
-
 
     render() {
         return (
@@ -149,9 +172,12 @@ export default class Home extends Component {
 
 		<Text style={{margin:5, fontSize:12}}>{this.state.location}</Text>
 
+						{this.state.hijri?(
 	                    <View style={{alignItems:'center', justifyContent:'center', height:30, width:300, borderRadius:6, margin:3, backgroundColor: 'rgba(128, 128, 128, 0.7)'}}> 
-	                    <Text style={{color:'#fff', fontFamily:'Bahnschrift'}}> {this.state.currentDay} | 11 Muharram 1441 H </Text>                    
+						 <Text style={{color:'#fff', fontFamily:'Bahnschrift'}}> {this.state.currentDay} | {this.state.hijri} </Text>  
 	                    </View>
+						):null
+						}
 
 	                    <ImageBackground style={{ justifyContent:'center', alignItems:'center', margin:5,
 					        width:340, height: 110}}  resizeMode="stretch"
@@ -172,9 +198,10 @@ export default class Home extends Component {
 					    <Image style={{ height:50, width:50, margin:10, bottom:2, position:'absolute', right:0}} source={require('../assets/refresh_masjid_terdekat.png')}/>
 					    
 					    </ImageBackground>
-
-					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, padding:10,textAlign:'left'}} placeholderTextColor='black' placeholder="Ketik Topik Islami Yang Anda Cari ..." /> 
-					    {/*<Text>{this.state.data.title_masjid}</Text>*/}
+						<View style={{justifyContent:'center'}}>
+					    <TextInput style={{width:340, height:40, borderRadius:8, backgroundColor:'#fff', margin:5, padding:10,textAlign:'left', fontSize:12}} placeholderTextColor='black' placeholder="Ketik Topik Islami Yang Anda Cari ..." /> 
+						<Image style={{ height:32, width:32, position:'absolute', right:11}} source={require('../assets/search.png')}/>
+						</View>
 
 					    <TouchableOpacity onPress={()=>{this.props.navigation.navigate('MasjidTerdaftar')}} style={{flex: 1, flexDirection: 'row'}}>
 					    <ImageBackground source={require('../assets/masjid_terdaftar_block_polos.png')} style={{borderRadius:5, height:60, width:340}} resizeMode="contain"> 
@@ -184,70 +211,21 @@ export default class Home extends Component {
 	                	</ImageBackground>
 	                	</TouchableOpacity>
  
-
-	                <View style={{flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
-
-							<View>
-
-							<TouchableOpacity onPress={()=>this.props.navigation.navigate('ListSurah')} style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:2}}
-							        source={require('../assets/masjidku.png')}/>
-							</TouchableOpacity>
-							<View style={{margin:3}}>
-							<Text style={{fontSize:12, width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Masjid </Text>
-							</View>
-							</View>
-
-
-							<View>
-
-							<TouchableOpacity onPress={()=>this.props.navigation.navigate('ListSurah')} style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:2}}
-							        source={require('../assets/baca_quran.png')}/>
-							</TouchableOpacity>
-							<View style={{margin:3}}>
-							<Text style={{fontSize:12, width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Qur'an </Text>
-							</View>
-							</View>
-
-							<View>
-
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:2}}
-							        source={require('../assets/kiblat.png')}/>
-							</TouchableOpacity>
-							<View style={{margin:3}}>
-							<Text style={{fontSize:12, width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Kiblat </Text>
-							</View>
-							</View>
-
-							<View>
-
-							<TouchableOpacity style={{margin:2, borderRadius:13, width:80, height:80, justifyContent:'center', alignItems:'center'}}>
-							<Image style={{ height:80, width:80, margin:2}}
-							        source={require('../assets/donasi.png')}/>
-							</TouchableOpacity>
-							<View style={{margin:3}}>
-							<Text style={{fontSize:12,  width:50, textAlign:'center', alignSelf:'center', fontFamily:'Bahnschrift'}}> Donasi </Text>
-							</View>
-							</View>
-
-
-							</View>
-
-							
-
-						
-
+						<View style={{flexDirection:'row', justifyContent:'center', alignItems:'center'}}>		
+							<SquareMenu onPress={()=>this.props.navigation.navigate('ListSurah')} iconSource={require('../assets/masjidku.png')} title="Masjid"/>
+							<SquareMenu onPress={()=>this.props.navigation.navigate('ListSurah')} iconSource={require('../assets/baca_quran.png')} title="Qur'an"/>
+							<SquareMenu onPress={()=>this.props.navigation.navigate('Kiblat')} iconSource={require('../assets/kiblat.png')} title="Kiblat"/>
+							<SquareMenu onPress={()=>this.props.navigation.navigate('Donasi')} iconSource={require('../assets/donasi.png')} title="Donasi"/>					
+						</View>
 	            </View>
-
-	                	
-					
+			
         </ImageBackground>
-        <View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+        <View style={styles.containerPoster}>
 					<View style={{flexDirection:'row',margin:3, alignItems:'center'}}>
-                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> BERITA ISLAMI </Text>
+                    <Text style={styles.titlePoster}> BERITA ISLAMI </Text>
+					<TouchableOpacity onPress={()=>this.props.navigation.navigate('BeritaIslamiList')}>
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+					</TouchableOpacity>
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
 		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={10} titleStyle={{color:'#fff', fontSize:12, fontFamily:'Bahnschrift'}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:14}} 
@@ -263,10 +241,12 @@ export default class Home extends Component {
 		</View>
 
 
-			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+			<View style={styles.containerPoster}>
 					<View style={{flexDirection:'row',margin:3, alignItems:'center'}}>
-                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> INFO KAJIAN </Text>
+                    <Text style={styles.titlePoster}> INFO KAJIAN </Text>
+					<TouchableOpacity onPress={()=>this.props.navigation.navigate('InfoKajianList')}>
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+					</TouchableOpacity>
                     </View>
                     	  
 		                   <View  style={{alignItems:'center', justifyContent:'center', width:350, backgroundColor:'rgba(52, 52, 52, 0.4)'}}>
@@ -303,10 +283,12 @@ export default class Home extends Component {
 						
 		</View>
 
-			<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+		<View style={styles.containerPoster}>
 					<View style={{flexDirection:'row',margin:3, alignItems:'center'}}>
-                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> MUTIARA HADIST </Text>
+                    <Text style={styles.titlePoster}> MUTIARA HADIST </Text>
+					<TouchableOpacity onPress={()=>this.props.navigation.navigate('MutiaraHadistList')}>
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
+					</TouchableOpacity>
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
 		                    <Image style={{ height:280, width:350, margin:2}} source={{uri:'https://yufidia.com/wp-content/uploads/2019/03/HADITS-012-KOTAK-REV.png'}} resizeMode="stretch"/>
@@ -317,9 +299,9 @@ export default class Home extends Component {
 		<Image source={require('../assets/banner_islampedia.png')} style={{borderRadius:5, height:60, width:350}} resizeMode="stretch" />
 		</TouchableOpacity>
 
-		<View style={{justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5}}>
+		<View style={styles.containerPoster}>
 					<View style={{flexDirection:'row',margin:3}}>
-                    <Text style={{flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'}}> VIDEO KAJIAN </Text>
+                    <Text style={styles.titlePoster}> VIDEO KAJIAN </Text>
                     
                     </View>
 		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
@@ -329,17 +311,12 @@ export default class Home extends Component {
 		</View>
 	    
 
-
-
 	    </View>  
-        </Content>
-
-                    
+        </Content>           
                         <View>
                         <View>                          
                         </View>
-                        </View>
-                
+                        </View>    
                 
             </Container>
             </Drawer>
@@ -348,3 +325,13 @@ export default class Home extends Component {
 
 
  }
+
+
+ const styles = StyleSheet.create({
+	 containerPoster: {
+		justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5
+	 },
+	 titlePoster:{
+		flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'
+	 }
+ })

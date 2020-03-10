@@ -5,7 +5,7 @@
 //     Image,
 //     Dimensions,
 //     Text,
-    
+
 // } from 'react-native'
 
 // // import AsyncStorage from '@react-native-community/async-storage';
@@ -38,9 +38,7 @@
 //     //         //     console.log('Already Loged in')
 
 //     //          this.props.navigation.navigate('Home')
-               
-                   
-                
+
 //     //         }else{
 //     //             // Navigate to login
 //     //             this.props.navigation.navigate('Login')

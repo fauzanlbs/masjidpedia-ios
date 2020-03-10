@@ -2,13 +2,13 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 
-function MasjidTerdaftar() {
+function Donasi() {
   return(
       <View style={{ flex: 1 }}>
-        <Text> Homezzz </Text>
+        <Text> Donasi </Text>
       </View>
       
   )
 }
 
-export default MasjidTerdaftar;
+export default Donasi;

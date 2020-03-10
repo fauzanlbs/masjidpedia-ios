@@ -1,9 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Login from './src/screens/Login';
-import Auth from './src/screens/Auth';
 import Routes from './src/Routes';
-
 
 export default function App() {
   return (
@@ -15,7 +12,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-   
-  },
-});
+    flex: 1
+  }
+})
