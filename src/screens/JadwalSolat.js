@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import axios from "axios";
 import moment from "moment";
+// import { TOKEN_SOLAT } from "react-native-dotenv";
 
 const screenWidth = Dimensions.get("window").width;
 
@@ -210,3 +211,4 @@ const styles = StyleSheet.create({
 });
 
 export default JadwalSolat;
+// ApiClient.init(TOKEN_SOLAT);

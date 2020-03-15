@@ -3,6 +3,11 @@ import { View, Text, Image, ActivityIndicator, Alert } from "react-native";
 import { Container, Form, Item, Input, Label, Icon, Button } from "native-base";
 import Api from "../../api/server";
 import AsyncStorage from "@react-native-community/async-storage";
+// import {
+//   GoogleSignin,
+//   GoogleSigninButton,
+//   statusCodes
+// } from "@react-native-community/google-signin";
 
 export default class Login extends Component {
   constructor(props) {

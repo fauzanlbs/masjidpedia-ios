@@ -9,6 +9,10 @@ import AsyncStorage from '@react-native-community/async-storage';
 import moment from 'moment';
 import axios from 'axios';
 import SquareMenu from '../components/SquareMenu'
+import Carousel from '../components/Carousel'
+import config from '../../config'
+// import Geolocation from '@react-native-community/geolocation';
+
 
 export default class Home extends Component {
   
@@ -21,10 +25,15 @@ export default class Home extends Component {
 			currentDay: moment().format("DD MMMM YYYY"),
 			location: '',
 			jadwal: [],
-			hijri:''
+			hijri:'',
+			days: undefined,
+			hours: undefined,
+			minutes: undefined,
+			seconds: undefined,
+			terdekat: '',
 		}
 
-		this.tick = this.tick.bind(this);
+		
 	}
 
 	async componentDidMount(){
@@ -53,15 +62,26 @@ export default class Home extends Component {
 			console.log('ini errornya:', err)
 		})
 
-		this.timerID = setInterval(
-			() => this.tick(),
-			1000
-		  );
+
+		// Geolocation.getCurrentPosition(info => console.log(info));
+
+		// this.interval = setInterval(() => {
+		// 	const { timeTillDate, timeFormat } = this.props;
+		// 	const then = moment(this.state.terdekat, "hh:mm a");
+		// 	const now = moment();
+		// 	const durasi = moment.duration(then.diff(now)); 
+		// 	const hours = durasi.get("hours").toString().padStart(2, '0');
+		// 	const minutes = durasi.get("minutes").toString().padStart(2, '0');
+		// 	const seconds = durasi.get("seconds").toString().padStart(2, '0');
+		// 	this.setState({ hours, minutes, seconds });
+		// }, 1000);
+
+		
 	}
 
 
 	fetchLocation(lat,lon){
-		let myGoogleKey = 'AIzaSyAatwH2oV7qgq93zsuFGQSbZJdPv2KtPCY'
+		let myGoogleKey = config.GOOGLE_KEY
 		fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + lat + ',' + lon + '&key=' + myGoogleKey)
         .then((response) => response.json())
         .then((responseJson) => {
@@ -90,7 +110,7 @@ export default class Home extends Component {
 
 	fetchDataSolat(){
   
-		let token = '9898e4c17ec6d4ad3432a0bfd152202c';
+		let token = config.TOKEN_SOLAT;
 		this.state.latitude = '3.2219665'
 		this.state.longitude = '101.7210999'
 		// let url = `https://muslimsalat.com/daily.json?latitude=${this.state.latitude}&&longitute=${this.state.longitude}&&key=${token}`;
@@ -109,14 +129,12 @@ export default class Home extends Component {
 	  }
 
 	componentWillUnmount() {
-        clearInterval(this.timerID);
+        if(this.interval) {
+			clearInterval(this.interval);
+		}
       }
 
-	  tick() {
-        this.setState({
-			currentTime: `${new Date().getHours().toLocaleString()}:${new Date().getMinutes().toLocaleString()}`
-        });
-	  } 
+	 
 
 	closeDrawer() {
         this._drawer._root.close()
@@ -227,7 +245,7 @@ export default class Home extends Component {
                     <Text style={{fontSize:13, marginTop:5, fontFamily:'Bahnschrift'}}> Lihat Semua </Text>
 					</TouchableOpacity>
                     </View>
-		                   <View style={{alignItems:'center', justifyContent:'center', width:350}}>
+		                   <TouchableOpacity style={{alignItems:'center', justifyContent:'center', width:350}} onPress={()=>this.props.navigation.navigate('BeritaIslamiDetail')}>
 		                    <Slideshow scrollEnabled containerStyle={{marginTop:10}} position={1} arrowSize={10} titleStyle={{color:'#fff', fontSize:12, fontFamily:'Bahnschrift'}} captionStyle={{backgroundColor:'rgba(52, 52, 52, 0.4)', color:'#fff', fontFamily:'Bahnschrift', fontSize:14}} 
 							      dataSource={[
 							        {
@@ -236,9 +254,11 @@ export default class Home extends Component {
 														        { url:"https://dev.mymasjidpedia.id/media/image/gallery/Gallery-26615d9b419c42c04.jpg" },
 														        { url:"https://dev.mymasjidpedia.id/media/image/gallery/Gallery-26615d89847c0c6aa.jpg" }
 							    ]} resizeMode="contain" height={200} />
-						  </View>
+						  </TouchableOpacity>
 						
 		</View>
+
+		{/* <Carousel data = {dummyData}/> */}
 
 
 			<View style={styles.containerPoster}>
@@ -251,7 +271,7 @@ export default class Home extends Component {
                     	  
 		                   <View  style={{alignItems:'center', justifyContent:'center', width:350, backgroundColor:'rgba(52, 52, 52, 0.4)'}}>
 		                     <ScrollView horizontal={true}>
-		                     <View style={{backgroundColor:'#fff', margin:10, borderRadius:5, flexDirection:'row'}}>
+		                     <TouchableOpacity style={{backgroundColor:'#fff', margin:10, borderRadius:5, flexDirection:'row'}} onPress={()=>this.props.navigation.navigate('InfoKajianDetail')}>
 			                    <View style={{marginLeft:5, marginRight:5, justifyContent:'center', alignItems:'center'}}>
 	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Minggu </Text>
 	                            <Text style={{marginLeft:5, marginRight:5,  fontFamily:'Bahnschrift', fontSize:40, color:'orange'}}> 17 </Text>
@@ -262,9 +282,9 @@ export default class Home extends Component {
 	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Ustad Syafiq Basalamah </Text>
 	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Bekasi </Text>
 	                            </View>
-		                    </View>
+		                    </TouchableOpacity>
 
-		                    <View style={{backgroundColor:'#fff', margin:10, borderRadius:5, flexDirection:'row'}}>
+		                    <TouchableOpacity style={{backgroundColor:'#fff', margin:10, borderRadius:5, flexDirection:'row'}} onPress={()=>this.props.navigation.navigate('InfoKajianDetail')}>
 			                    <View style={{marginLeft:5, marginRight:5, justifyContent:'center', alignItems:'center'}}>
 	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Minggu </Text>
 	                            <Text style={{marginLeft:5, marginRight:5,  fontFamily:'Bahnschrift', fontSize:40, color:'orange'}}> 21 </Text>
@@ -275,7 +295,7 @@ export default class Home extends Component {
 	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:19, fontWeight:'bold'}}> Ustad Maududi Abdullah </Text>
 	                            <Text style={{marginLeft:5, marginRight:5, marginTop:5 , fontFamily:'Bahnschrift', fontSize:16}}> Bogor </Text>
 	                            </View>
-		                    </View>
+		                    </TouchableOpacity>
 
 		                    </ScrollView>
 						  </View>
@@ -329,9 +349,31 @@ export default class Home extends Component {
 
  const styles = StyleSheet.create({
 	 containerPoster: {
-		justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5
+		justifyContent:'center', alignItems:'center', margin:20, marginTop:20,backgroundColor:'#fff', borderWidth:0.5,  borderRadius:5, borderColor:'grey'
 	 },
 	 titlePoster:{
 		flex:1, fontSize:20, marginTop:5, fontFamily:'Bahnschrift', fontWeight:'bold'
 	 }
  })
+
+
+
+ const dummyData =
+        [{
+                title: 'Ini kota di AS yang Penduduknya Mayoritas Muslim', url: 'https://dev.mymasjidpedia.id/media/image/gallery/Gallery-8905db13e2537fd1.jpg',
+                description: "Ini kota di AS yang Penduduknya Mayoritas Muslim.",
+                id: 1
+
+        },
+        {
+			title: 'Ini kota di AS yang Penduduknya Mayoritas Muslim', url: 'https://dev.mymasjidpedia.id/media/image/gallery/Gallery-26615d9b419c42c04.jpg',
+			description: "Ini kota di AS yang Penduduknya Mayoritas Muslim.",
+			id: 2
+
+		},
+        {
+			title: 'Ini kota di AS yang Penduduknya Mayoritas Muslim', url: 'https://dev.mymasjidpedia.id/media/image/gallery/Gallery-26615d89847c0c6aa.jpg',
+			description: "Ini kota di AS yang Penduduknya Mayoritas Muslim.",
+			id: 3
+
+		}]

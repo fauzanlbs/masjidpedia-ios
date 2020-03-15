@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>64E69CCC-13C4-469F-8F9B-487E129F4BFC</key>
+		<key>3E2C1A67-E6BC-4C8B-90E5-117831DE6D81</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>64E69CCC-13C4-469F-8F9B-487E129F4BFC.xcactivitylog</string>
+			<string>3E2C1A67-E6BC-4C8B-90E5-117831DE6D81.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -30,13 +30,45 @@
 			<key>signature</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>605546839.76354504</real>
+			<real>605980007.67521298</real>
 			<key>timeStoppedRecording</key>
-			<real>605546841.39223695</real>
+			<real>605980009.27452505</real>
 			<key>title</key>
 			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>64E69CCC-13C4-469F-8F9B-487E129F4BFC</string>
+			<string>3E2C1A67-E6BC-4C8B-90E5-117831DE6D81</string>
+		</dict>
+		<key>97751D3F-FDD7-4D27-8D40-DC646E797201</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>97751D3F-FDD7-4D27-8D40-DC646E797201.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>masjidpedia project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>masjidpedia</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>605980338.25722396</real>
+			<key>timeStoppedRecording</key>
+			<real>605980341.40355396</real>
+			<key>title</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>97751D3F-FDD7-4D27-8D40-DC646E797201</string>
 		</dict>
 	</dict>
 </dict>

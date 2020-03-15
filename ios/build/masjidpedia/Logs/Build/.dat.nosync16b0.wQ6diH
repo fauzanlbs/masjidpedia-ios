@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>7779CF8E-EB91-41B6-94FA-E250056F0CD7</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7779CF8E-EB91-41B6-94FA-E250056F0CD7.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>masjidpedia project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>masjidpedia</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>605977240.76405203</real>
+			<key>timeStoppedRecording</key>
+			<real>605977242.05835998</real>
+			<key>title</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>7779CF8E-EB91-41B6-94FA-E250056F0CD7</string>
+		</dict>
+		<key>B0414C64-7F86-4CE3-A640-490B218CD609</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B0414C64-7F86-4CE3-A640-490B218CD609.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>masjidpedia project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>masjidpedia</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>605977893.22018194</real>
+			<key>timeStoppedRecording</key>
+			<real>605977894.69204402</real>
+			<key>title</key>
+			<string>Building workspace masjidpedia with scheme masjidpedia and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>B0414C64-7F86-4CE3-A640-490B218CD609</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

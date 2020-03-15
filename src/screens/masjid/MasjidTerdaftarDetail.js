@@ -36,12 +36,12 @@ class MasjidTerdaftarDetail extends Component {
     });
   }
 
-  renderList(item) {
+  renderList = item => {
     return (
       <View style={{ backgroundColor: "#F5F5F5" }}>
         <TouchableOpacity
           onPress={() => {
-            this.props.navigation.navigate("Home");
+            this.props.navigation.navigate("MasjidTerdaftarInfo");
           }}
           style={{
             flexDirection: "row",
@@ -82,7 +82,7 @@ class MasjidTerdaftarDetail extends Component {
         </TouchableOpacity>
       </View>
     );
-  }
+  };
 
   render() {
     return (

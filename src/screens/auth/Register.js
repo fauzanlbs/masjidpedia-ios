@@ -1,5 +1,10 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
+// import {
+//   GoogleSignin,
+//   GoogleSigninButton,
+//   statusCodes
+// } from "@react-native-community/google-signin";
 
 function Register() {
   return (
